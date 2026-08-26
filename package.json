@@ -1,0 +1,26 @@
+{
+  "name": "jargonautica",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "sync": "node --env-file-if-exists=.env scripts/sync.mjs && node scripts/graph.mjs",
+    "check": "node scripts/check.mjs && node --check worker/index.js",
+    "dev": "npm run sync && astro dev",
+    "build": "npm run sync && npm run check && astro build",
+    "preview": "astro preview",
+    "worker:dev": "npm run build && wrangler dev",
+    "worker:check": "wrangler deploy --dry-run --outdir=.wrangler/dry",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^7.2.4",
+    "astro": "^7.2.6",
+    "github-slugger": "^2.0.0",
+    "gray-matter": "^4.0.3",
+    "unist-util-visit": "^5.1.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.126.0"
+  }
+}

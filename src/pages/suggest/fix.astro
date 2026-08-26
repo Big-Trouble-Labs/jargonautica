@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import SubmitForm from '../../components/SubmitForm.astro';
+---
+<Base
+  title="Report a problem"
+  description="Something wrong in an entry? Tell us what it is. A person reads every report."
+>
+  <h1>Report a problem</h1>
+  <p class="lede">
+    Wrong, out of date, misleading, or explained in a way that does not land. All four are worth
+    reporting, and the fourth one is the hardest to spot from the inside.
+  </p>
+
+  <SubmitForm kind="fix" />
+
+  <h2>What Happens Next</h2>
+  <p>
+    A person reads it and checks it. If you are right, the entry changes and the correction goes live
+    with the next deploy. If you are wrong, or if it is more arguable than it looks, that is useful too:
+    an entry that two people read differently is usually an entry that needs rewriting whoever turns out
+    to be correct.
+  </p>
+  <p>
+    Corrections get the same credit line as suggestions if you leave a name.
+  </p>
+</Base>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Jargonautica">
+  <rect width="64" height="64" rx="13" fill="#0F6B5F"/>
+  <circle cx="32" cy="32" r="21" fill="none" stroke="#F1F4F2" stroke-width="3.2" opacity=".55"/>
+  <path d="M32 7 37.1 25.9 56 32 37.1 38.1 32 57 26.9 38.1 8 32 26.9 25.9Z" fill="#F1F4F2"/>
+</svg>

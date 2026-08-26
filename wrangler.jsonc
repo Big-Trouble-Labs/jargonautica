@@ -1,0 +1,31 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "jargonautica",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-08-25",
+  "observability": { "enabled": true },
+  "vars": {
+    "GITHUB_REPO": "big-trouble-labs/jargonautica",
+    // NOTIFY_EMAIL is deliberately not here. It is the inbox that receives
+    // submissions, and this file is public, so it is set as a secret:
+    //   npx wrangler secret put NOTIFY_EMAIL
+    // The sending address is fine in the open: it accepts no mail.
+    "NOTIFY_FROM": "Jargonautica <noreply@send.jargonautica.com>",
+    // a Turnstile token is only accepted if it was solved on one of these
+    "TURNSTILE_HOSTNAMES": "jargonautica.com,www.jargonautica.com"
+  },
+  // Both hostnames are listed on purpose. Wrangler treats this as the whole
+  // set, so leaving the apex out here would remove it on the next deploy.
+  "routes": [
+    { "pattern": "jargonautica.com", "custom_domain": true },
+    { "pattern": "www.jargonautica.com", "custom_domain": true }
+  ],
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // only this path wakes the Worker up. Everything else is served
+    // straight from the built files.
+    "run_worker_first": ["/api/*"]
+  }
+}

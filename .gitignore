@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.astro/
+.env
+.DS_Store
+src/generated/
+*.zip
+*.bak
+.dev.vars
+
+.wrangler/
+_incoming.tgz
+*.tgz
+_to_delete/
+
+# stays on this machine: it names local paths and is not for publication
+CLAUDE.md
+
+# local one-off, not for publication
+scripts/scrub-history.sh

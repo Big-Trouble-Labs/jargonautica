@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import SubmitForm from '../../components/SubmitForm.astro';
+---
+<Base
+  title="Propose a glossary"
+  description="Jargonautica is meant to be a family of glossaries. Artificial intelligence is the first. Tell us which field should be next."
+>
+  <h1>Propose a glossary</h1>
+  <p class="lede">
+    The two-level format is not specific to artificial intelligence. It suits any field that invents
+    vocabulary faster than it explains it, which is most of them. AI is the first glossary and it is not
+    meant to be the last.
+  </p>
+
+  <SubmitForm kind="glossary" />
+
+  <h2>What This Actually Takes</h2>
+  <p>
+    Worth being honest about the size of it. The AI glossary is 477 entries, each written twice, each
+    linked to the ones it depends on. It took a while. A glossary is not a weekend.
+  </p>
+  <p>
+    Which is why the last question on that form is the one that matters. A subject nobody is willing to
+    help with is a subject that stays a good idea. A subject with someone who knows it well enough to
+    argue about the definitions is a subject that can actually happen.
+  </p>
+</Base>

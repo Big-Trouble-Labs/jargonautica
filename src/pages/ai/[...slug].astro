@@ -1,0 +1,157 @@
+---
+import fs from 'node:fs';
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { slugify, sectionAnchor, allTerms, groupBySection } from '../../lib/terms';
+
+let graph: any = { nodes: [], neighbours: [], sections: [] };
+try { graph = JSON.parse(fs.readFileSync('src/generated/graph.json', 'utf8')); } catch {}
+const HUES: number[] = graph.sections.map((_: string, i: number) => Math.round((i * 137.508) % 360));
+const indexOfSlug = new Map<string, number>(graph.nodes.map((n: any, i: number) => [n.s, i]));
+
+export async function getStaticPaths() {
+  const entries = await getCollection('terms');
+  const terms = await allTerms();
+  const groups = groupBySection(terms);
+
+  // where each term sits in its own section, so a reader can walk through one
+  const place = new Map<string, { prev?: any; next?: any }>();
+  for (const g of groups) {
+    g.items.forEach((t, i) => {
+      place.set(t.slug, { prev: g.items[i - 1], next: g.items[i + 1] });
+    });
+  }
+
+  return entries.map((entry) => {
+    const slug = slugify(entry.data.title);
+    return { params: { slug }, props: { entry, ...place.get(slug) } };
+  });
+}
+
+const { entry, prev, next } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+const slug = slugify(d.title);
+
+// ---- the local graph: this term, what it links to, and how those link to each other ----
+const me = indexOfSlug.get(slug);
+let local: any = null;
+if (me !== undefined && graph.neighbours[me]?.length) {
+  const nbrs: number[] = graph.neighbours[me];
+  const inSet = new Set(nbrs);
+  const ranked = nbrs
+    .map((n: number) => ({ n, ties: graph.neighbours[n].filter((x: number) => inSet.has(x)).length, deg: graph.nodes[n].d }))
+    .sort((a, b) => b.ties - a.ties || b.deg - a.deg)
+    .slice(0, 12)
+    .map((r) => r.n);
+
+  const shown = new Set(ranked);
+  const W = 760, H = 320, CX = W / 2, CY = H / 2, RX = 230, RY = 118;
+  const pos = new Map<number, { x: number; y: number; a: number }>();
+  ranked.forEach((n: number, i: number) => {
+    const a = (i / ranked.length) * Math.PI * 2 - Math.PI / 2;
+    pos.set(n, { x: CX + Math.cos(a) * RX, y: CY + Math.sin(a) * RY, a });
+  });
+
+  const between: any[] = [];
+  for (const n of ranked) {
+    for (const m of graph.neighbours[n]) {
+      if (m <= n || !shown.has(m)) continue;
+      between.push([pos.get(n), pos.get(m)]);
+    }
+  }
+
+  local = {
+    W, H, CX, CY,
+    hidden: nbrs.length - ranked.length,
+    total: nbrs.length,
+    centre: { hue: HUES[graph.nodes[me].c], r: 9 },
+    spokes: ranked.map((n: number) => {
+      const p = pos.get(n)!;
+      const right = Math.cos(p.a) > 0.25;
+      const leftish = Math.cos(p.a) < -0.25;
+      return {
+        x: p.x, y: p.y,
+        node: graph.nodes[n],
+        hue: HUES[graph.nodes[n].c],
+        r: Math.min(4 + Math.sqrt(graph.nodes[n].d) * 0.7, 8),
+        anchor: right ? 'start' : leftish ? 'end' : 'middle',
+        lx: p.x + (right ? 11 : leftish ? -11 : 0),
+        ly: p.y + (Math.abs(Math.cos(p.a)) < 0.25 ? (p.y < CY ? -14 : 18) : 4),
+        label: graph.nodes[n].t.length > 20 ? graph.nodes[n].t.slice(0, 19) + '…' : graph.nodes[n].t,
+      };
+    }),
+    between,
+  };
+}
+---
+<Base title={d.title} description={d.summary}>
+  <a class="chip" href={`/ai/#${sectionAnchor(d.section)}`}>{d.section}</a>
+  <h1>{d.title}</h1>
+  {d.aliases.length > 0 && <p class="aliases">Also called: {d.aliases.join(', ')}</p>}
+
+  <article><Content /></article>
+
+  {local && (
+    <section class="local">
+      <h2>How it connects</h2>
+      <p class="hint">
+        {d.title} links to {local.total} other {local.total === 1 ? 'term' : 'terms'}
+        {local.hidden > 0 ? `, and the ${local.spokes.length} closest are drawn here` : ''}.
+        The faint lines are links between those terms.{' '}
+        <a href={`/ai/graph/?term=${slug}`}>See it in the full graph</a>.
+      </p>
+      <svg class="localgraph" viewBox={`0 0 ${local.W} ${local.H}`} role="img"
+           aria-label={`Diagram of terms linked to ${d.title}. The same links are listed under Related.`}>
+        {local.between.map((pair: any) => (
+          <line x1={pair[0].x} y1={pair[0].y} x2={pair[1].x} y2={pair[1].y} class="tie" />
+        ))}
+        {local.spokes.map((s: any) => (
+          <line x1={local.CX} y1={local.CY} x2={s.x} y2={s.y} class="spoke" />
+        ))}
+        {local.spokes.map((s: any) => (
+          <a href={`/ai/${s.node.s}/`}>
+            <title>{s.node.t}</title>
+            <circle cx={s.x} cy={s.y} r={s.r} style={`--h:${s.hue}`} class="dot" />
+            <text x={s.lx} y={s.ly} text-anchor={s.anchor} class="lbl">{s.label}</text>
+          </a>
+        ))}
+        <circle cx={local.CX} cy={local.CY} r={local.centre.r} style={`--h:${local.centre.hue}`} class="dot me" />
+        <text x={local.CX} y={local.CY + 26} text-anchor="middle" class="lbl me">{d.title}</text>
+      </svg>
+    </section>
+  )}
+
+  {(prev || next) && (
+    <nav class="pager" aria-label={`More in ${d.section}`}>
+      {prev && <a href={`/ai/${prev.slug}/`}><span>Previous in {d.section}</span>{prev.title}</a>}
+      {next && <a class="next" href={`/ai/${next.slug}/`}><span>Next in {d.section}</span>{next.title}</a>}
+    </nav>
+  )}
+
+  <footer class="term">
+    {d.suggested_by ? (
+      <p>Suggested by {d.suggested_by_url
+        ? <a href={d.suggested_by_url} rel="nofollow noopener">{d.suggested_by}</a>
+        : d.suggested_by}</p>
+    ) : null}
+    <p>Something wrong here? <a href={`/suggest/fix/?term=${encodeURIComponent(d.title)}`}>Report it</a>. Missing a term? <a href="/suggest/">Suggest one</a>. This entry is CC BY-SA 4.0.</p>
+  </footer>
+
+  <style is:global>
+    .local{margin-top:2.75rem}
+    .local .hint{color:var(--ink-3);font-size:.9375rem;margin:.15rem 0 .75rem}
+    .localgraph{width:100%;height:auto;background:var(--surface);border:1px solid var(--rule);border-radius:3px;display:block}
+    .localgraph .tie{stroke:var(--rule);stroke-width:1}
+    .localgraph .spoke{stroke:var(--ink-3);stroke-width:1;opacity:.5}
+    .localgraph .dot{fill:hsl(var(--h) 52% 38%)}
+    .localgraph .dot.me{stroke:var(--ink);stroke-width:2}
+    .localgraph .lbl{font-family:var(--mono);font-size:11px;fill:var(--ink-2)}
+    .localgraph .lbl.me{font-family:var(--display);font-weight:600;font-size:13px;fill:var(--ink)}
+    .localgraph a:hover .dot{fill:var(--accent)}
+    .localgraph a:hover .lbl{fill:var(--accent)}
+    :root[data-theme="dark"] .localgraph .dot{fill:hsl(var(--h) 58% 62%)}
+    @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .localgraph .dot{fill:hsl(var(--h) 58% 62%)}}
+    @media (max-width:560px){.localgraph .lbl{font-size:13px}}
+  </style>
+</Base>

@@ -1,0 +1,23 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # every link resolves, no orphans, no clashing addresses, worker parses
+      - run: npm run check
+      # the site itself builds, including the graph layout
+      - run: npm run build
+      # the Worker bundles and the Cloudflare config is valid
+      - run: npm run worker:check

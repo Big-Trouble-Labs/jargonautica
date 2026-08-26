@@ -1,0 +1,455 @@
+---
+import fs from 'node:fs';
+import Base from '../../layouts/Base.astro';
+
+const graph = JSON.parse(fs.readFileSync('src/generated/graph.json', 'utf8'));
+const sections: string[] = graph.sections;
+
+// One hue per section, spaced by the golden angle so sections that sit next to
+// each other in the list never end up the same colour.
+const hues = sections.map((_, i) => Math.round((i * 137.508) % 360));
+
+const counts = sections.map((_, i) => graph.nodes.filter((n: any) => n.c === i).length);
+---
+<Base
+  title="The graph"
+  wide={true}
+  description="Every term in the AI glossary and every link between them, drawn as one picture you can pan, zoom and search."
+>
+  <h1>The graph</h1>
+  <p class="lede">
+    {graph.nodes.length} terms and {graph.edges.length} links between them. Drag to move, zoom with the
+    buttons or by holding the command key while you scroll, hover to see what a term connects to, click to
+    read it. Colour is the section it belongs to, and a bigger dot has more links.
+  </p>
+
+  <div class="controls">
+    <input id="gq" type="search" placeholder="Find a term" autocomplete="off" spellcheck="false" aria-label="Find a term in the graph" />
+    <div class="zoom" role="group" aria-label="Zoom">
+      <button id="gout" class="ctl" type="button" aria-label="Zoom out">&minus;</button>
+      <span id="glevel" class="level" aria-live="off">100%</span>
+      <button id="gin" class="ctl" type="button" aria-label="Zoom in">+</button>
+    </div>
+    <button id="greset" class="ctl" type="button">Fit</button>
+    <button id="glabels" class="ctl" type="button" aria-pressed="false">Show all labels</button>
+    <span id="gstatus" class="status"></span>
+  </div>
+
+  <figure class="stage">
+    <canvas id="gcanvas" role="img" aria-label="A network diagram of every term in the glossary. The same information is available as a list on the glossary page."></canvas>
+    <div id="gtip" class="tip" hidden></div>
+    <div id="ghint" class="hint-overlay" hidden aria-hidden="true"></div>
+    <noscript><p class="fallback">The graph needs JavaScript. The <a href="/ai/">glossary list</a> has everything the graph shows.</p></noscript>
+  </figure>
+
+  <h2>Sections</h2>
+  <p class="hint">Click a section to show only that one. Click it again to bring the rest back.</p>
+  <ul class="legend" id="glegend">
+    {sections.map((name, i) => (
+      <li>
+        <button type="button" data-sec={i} style={`--h:${hues[i]}`} aria-pressed="false">
+          <span class="dot"></span>{name}<span class="n">{counts[i]}</span>
+        </button>
+      </li>
+    ))}
+  </ul>
+
+  <script type="application/json" id="ghues" set:html={JSON.stringify(hues)}></script>
+
+  <style is:global>
+    .controls{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:1.5rem 0 .75rem}
+    .controls input{font-family:var(--display);font-weight:600;font-size:.9375rem;padding:.45rem .7rem;border:1px solid var(--rule);border-radius:3px;background:var(--surface);color:var(--ink);min-width:14rem}
+    .controls input::placeholder{font-weight:400;color:var(--ink-3)}
+    .ctl{font-family:var(--mono);font-size:.8125rem;padding:.45rem .7rem;border:1px solid var(--rule);border-radius:3px;background:var(--surface);color:var(--ink-2);cursor:pointer}
+    .ctl:hover{border-color:var(--accent);color:var(--accent)}
+    .ctl[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+    .status{font-family:var(--mono);font-size:.75rem;color:var(--ink-3)}
+    .zoom{display:flex;align-items:stretch;border:1px solid var(--rule);border-radius:3px;background:var(--surface);overflow:hidden}
+    .zoom .ctl{border:0;border-radius:0;padding:.45rem .65rem;font-size:1rem;line-height:1}
+    .zoom .ctl:hover{background:var(--accent-soft)}
+    .zoom .level{font-family:var(--mono);font-size:.75rem;color:var(--ink-3);display:flex;align-items:center;padding:0 .35rem;min-width:3.4rem;justify-content:center;border-left:1px solid var(--rule);border-right:1px solid var(--rule);font-variant-numeric:tabular-nums}
+    .hint-overlay{position:absolute;left:50%;bottom:1rem;transform:translateX(-50%);background:var(--ink);color:var(--ground);font-family:var(--mono);font-size:.75rem;padding:.45rem .8rem;border-radius:999px;white-space:nowrap;z-index:6;pointer-events:none;box-shadow:var(--shadow)}
+    @media (max-width:520px){.hint-overlay{font-size:.6875rem;white-space:normal;max-width:80%;text-align:center}}
+
+    @media (max-width:640px){.stage{height:min(62vh,520px)}}
+    .stage{position:relative;margin:0;border:1px solid var(--rule);border-radius:4px;background:var(--surface);overflow:hidden;height:min(70vh,660px);touch-action:none}
+    .stage canvas{display:block;width:100%;height:100%;cursor:grab}
+    .stage canvas.dragging{cursor:grabbing}
+    .fallback{padding:2rem;color:var(--ink-3)}
+    .tip{position:absolute;pointer-events:none;background:var(--ground);border:1px solid var(--rule);border-radius:3px;box-shadow:var(--shadow);padding:.45rem .6rem;max-width:22rem;font-size:.875rem;line-height:1.4;z-index:5}
+    .tip strong{font-family:var(--display);display:block}
+    .tip em{font-style:normal;font-family:var(--mono);font-size:.6875rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);display:block}
+    .tip small{color:var(--ink-3);display:block;margin-top:.15rem}
+
+    .hint{color:var(--ink-3);font-size:.9375rem;margin:.15rem 0 .9rem}
+    .legend{list-style:none;display:flex;flex-wrap:wrap;gap:.35rem;padding:0;margin:0}
+    .legend button{display:flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.75rem;background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:.3rem .55rem;color:var(--ink-2);cursor:pointer;text-align:left}
+    .legend button:hover{border-color:var(--accent)}
+    .legend button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft);color:var(--ink)}
+    .legend .dot{width:.6rem;height:.6rem;border-radius:50%;flex:0 0 auto;background:hsl(var(--h) 52% 38%)}
+    .legend .n{color:var(--ink-3)}
+    :root[data-theme="dark"] .legend .dot{background:hsl(var(--h) 58% 62%)}
+    @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .legend .dot{background:hsl(var(--h) 58% 62%)}}
+  </style>
+
+  <script is:inline>
+    (function () {
+      var canvas = document.getElementById('gcanvas');
+      if (!canvas || !canvas.getContext) return;
+      var ctx = canvas.getContext('2d');
+      var tip = document.getElementById('gtip');
+      var status = document.getElementById('gstatus');
+      var qbox = document.getElementById('gq');
+      var HUES = JSON.parse(document.getElementById('ghues').textContent);
+
+      var G = null;
+      var view = { x: 0, y: 0, k: 0.32 };
+      var home = null;
+      var hover = -1;
+      var pinned = -1;
+      var onlySection = -1;
+      var matches = null;
+      var allLabels = false;
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      function isDark() {
+        var t = document.documentElement.getAttribute('data-theme');
+        if (t) return t === 'dark';
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
+      function css(name) {
+        return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+      }
+      function nodeColour(c, dim) {
+        var d = isDark();
+        var l = d ? 62 : 38;
+        var s = d ? 58 : 52;
+        return 'hsl(' + HUES[c] + ' ' + (dim ? Math.round(s * 0.35) : s) + '% ' + (dim ? (d ? 26 : 78) : l) + '%)';
+      }
+
+      function resize() {
+        var r = canvas.getBoundingClientRect();
+        canvas.width = Math.round(r.width * dpr);
+        canvas.height = Math.round(r.height * dpr);
+        draw();
+      }
+      function refit() { if (G) { fit(); resize(); } }
+
+      function fit() {
+        var r = canvas.getBoundingClientRect();
+        var pad = 46;
+        var minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+        for (var i = 0; i < G.nodes.length; i++) {
+          var n = G.nodes[i];
+          if (n.x < minX) minX = n.x;
+          if (n.x > maxX) maxX = n.x;
+          if (n.y < minY) minY = n.y;
+          if (n.y > maxY) maxY = n.y;
+        }
+        var k = Math.min((r.width - pad * 2) / (maxX - minX), (r.height - pad * 2) / (maxY - minY));
+        view = {
+          k: k,
+          x: r.width / 2 - ((minX + maxX) / 2) * k,
+          y: r.height / 2 - ((minY + maxY) / 2) * k,
+        };
+        home = { x: view.x, y: view.y, k: view.k };
+      }
+
+      function toScreen(n) {
+        return [n.x * view.k + view.x, n.y * view.k + view.y];
+      }
+
+      function visible(i) {
+        if (onlySection > -1 && G.nodes[i].c !== onlySection) return false;
+        return true;
+      }
+
+      function draw() {
+        if (!G) return;
+        var r = canvas.getBoundingClientRect();
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.clearRect(0, 0, r.width, r.height);
+
+        var neigh = null;
+        var focus = pinned > -1 ? pinned : hover;
+        if (focus > -1) {
+          neigh = new Set(G.neighbours[focus]);
+          neigh.add(focus);
+        }
+
+        // links first, underneath
+        ctx.lineWidth = 1;
+        for (var e = 0; e < G.edges.length; e++) {
+          var a = G.edges[e][0], b = G.edges[e][1];
+          if (!visible(a) || !visible(b)) continue;
+          var lit = neigh && (neigh.has(a) && neigh.has(b) && (a === focus || b === focus));
+          if (neigh && !lit) continue;
+          var pa = toScreen(G.nodes[a]), pb = toScreen(G.nodes[b]);
+          ctx.strokeStyle = lit ? css('--accent') : (isDark() ? 'rgba(168,183,177,.18)' : 'rgba(71,85,79,.16)');
+          ctx.lineWidth = lit ? 1.4 : 1;
+          ctx.beginPath();
+          ctx.moveTo(pa[0], pa[1]);
+          ctx.lineTo(pb[0], pb[1]);
+          ctx.stroke();
+        }
+
+        // nodes
+        var labels = [];
+        for (var i = 0; i < G.nodes.length; i++) {
+          if (!visible(i)) continue;
+          var n = G.nodes[i];
+          var p = toScreen(n);
+          if (p[0] < -60 || p[1] < -60 || p[0] > r.width + 60 || p[1] > r.height + 60) continue;
+          var dim = (neigh && !neigh.has(i)) || (matches && !matches.has(i));
+          var rad = (3 + Math.sqrt(n.d) * 1.15) * Math.max(0.6, Math.min(view.k * 2.6, 1.7));
+          ctx.beginPath();
+          ctx.arc(p[0], p[1], rad, 0, 6.2832);
+          ctx.fillStyle = nodeColour(n.c, dim);
+          ctx.fill();
+          if (i === focus || (matches && matches.has(i) && matches.size < 30)) {
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = css('--ink');
+            ctx.stroke();
+          }
+          var wants = i === focus || (neigh && neigh.has(i)) || (matches && matches.has(i)) || allLabels || view.k > 0.55 || n.d >= 26;
+          if (wants && !dim) labels.push([p[0], p[1] + rad + 11, n.t, i === focus]);
+        }
+
+        // labels last, on top, and never on top of each other
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        labels.sort(function (a, b) { return (b[3] ? 1 : 0) - (a[3] ? 1 : 0); });
+        var placed = [];
+        var ink = css('--ink');
+        var shade = isDark() ? 'rgba(13,21,19,.82)' : 'rgba(241,244,242,.86)';
+        for (var L = 0; L < labels.length && placed.length < 200; L++) {
+          var l = labels[L];
+          ctx.font = (l[3] ? '600 13px ' : '500 11.5px ') + '"IBM Plex Mono", ui-monospace, Menlo, monospace';
+          var w = ctx.measureText(l[2]).width;
+          var box = [l[0] - w / 2 - 3, l[1] - 7, w + 6, 14];
+          var clash = false;
+          for (var q = 0; q < placed.length; q++) {
+            var o = placed[q];
+            if (box[0] < o[0] + o[2] && box[0] + box[2] > o[0] && box[1] < o[1] + o[3] && box[1] + box[3] > o[1]) { clash = true; break; }
+          }
+          if (clash) continue;
+          placed.push(box);
+          ctx.fillStyle = shade;
+          ctx.fillRect(box[0], box[1], box[2], box[3]);
+          ctx.fillStyle = ink;
+          ctx.fillText(l[2], l[0], l[1]);
+        }
+      }
+
+      function nodeAt(mx, my) {
+        var best = -1, bd = 18 * 18;
+        for (var i = 0; i < G.nodes.length; i++) {
+          if (!visible(i)) continue;
+          var p = toScreen(G.nodes[i]);
+          var dx = p[0] - mx, dy = p[1] - my;
+          var d = dx * dx + dy * dy;
+          if (d < bd) { bd = d; best = i; }
+        }
+        return best;
+      }
+
+      function showTip(i, mx, my) {
+        var n = G.nodes[i];
+        tip.innerHTML = '';
+        var em = document.createElement('em'); em.textContent = G.sections[n.c];
+        var st = document.createElement('strong'); st.textContent = n.t;
+        var sm = document.createElement('small'); sm.textContent = n.d + (n.d === 1 ? ' link' : ' links');
+        tip.appendChild(em); tip.appendChild(st); tip.appendChild(sm);
+        tip.hidden = false;
+        var r = canvas.getBoundingClientRect();
+        var tw = tip.offsetWidth, th = tip.offsetHeight;
+        tip.style.left = Math.max(6, Math.min(mx + 14, r.width - tw - 6)) + 'px';
+        tip.style.top = Math.max(6, Math.min(my + 14, r.height - th - 6)) + 'px';
+      }
+
+      // ---- interaction ----
+      var dragging = false, moved = false, last = null, pointers = new Map(), pinchStart = null;
+
+      canvas.addEventListener('pointerdown', function (e) {
+        canvas.setPointerCapture(e.pointerId);
+        pointers.set(e.pointerId, [e.clientX, e.clientY]);
+        if (pointers.size === 1) { dragging = true; moved = false; last = [e.clientX, e.clientY]; canvas.classList.add('dragging'); }
+        else if (pointers.size === 2) { pinchStart = pinchState(); }
+      });
+
+      function pinchState() {
+        var pts = Array.from(pointers.values());
+        var dx = pts[0][0] - pts[1][0], dy = pts[0][1] - pts[1][1];
+        return { d: Math.hypot(dx, dy) || 1, k: view.k };
+      }
+
+      canvas.addEventListener('pointermove', function (e) {
+        var r = canvas.getBoundingClientRect();
+        if (pointers.has(e.pointerId)) pointers.set(e.pointerId, [e.clientX, e.clientY]);
+
+        if (pointers.size === 2 && pinchStart) {
+          var now = pinchState();
+          zoomTo(pinchStart.k * (now.d / pinchStart.d), r.width / 2, r.height / 2);
+          return;
+        }
+        if (dragging && last) {
+          var dx = e.clientX - last[0], dy = e.clientY - last[1];
+          if (Math.abs(dx) + Math.abs(dy) > 2) moved = true;
+          view.x += dx; view.y += dy;
+          last = [e.clientX, e.clientY];
+          tip.hidden = true;
+          draw();
+          return;
+        }
+        var mx = e.clientX - r.left, my = e.clientY - r.top;
+        var i = nodeAt(mx, my);
+        if (i !== hover) { hover = i; draw(); }
+        if (i > -1) { showTip(i, mx, my); canvas.style.cursor = 'pointer'; }
+        else { tip.hidden = true; canvas.style.cursor = ''; }
+      });
+
+      function endPointer(e) {
+        pointers.delete(e.pointerId);
+        if (pointers.size < 2) pinchStart = null;
+        if (pointers.size === 0) { dragging = false; last = null; canvas.classList.remove('dragging'); }
+      }
+      canvas.addEventListener('pointerup', function (e) {
+        var wasMoved = moved;
+        endPointer(e);
+        if (wasMoved) return;
+        var r = canvas.getBoundingClientRect();
+        var i = nodeAt(e.clientX - r.left, e.clientY - r.top);
+        if (i > -1) location.href = '/ai/' + G.nodes[i].s + '/';
+      });
+      canvas.addEventListener('pointercancel', endPointer);
+      canvas.addEventListener('pointerleave', function () { hover = -1; tip.hidden = true; draw(); });
+
+      function zoomTo(k, ax, ay) {
+        k = Math.max(0.08, Math.min(k, 4));
+        var wx = (ax - view.x) / view.k, wy = (ay - view.y) / view.k;
+        view.k = k;
+        view.x = ax - wx * k;
+        view.y = ay - wy * k;
+        showLevel();
+        draw();
+      }
+
+      // Zooming on scroll steals the page scroll, which is maddening. Hold a
+      // modifier to zoom; a bare scroll goes to the page, with a hint the first
+      // few times so nobody thinks the graph is broken.
+      var hint = document.getElementById('ghint');
+      var hintTimer = null;
+      var mac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
+      var hintsLeft = 3;
+
+      function showHint() {
+        if (hintsLeft <= 0) return;
+        hint.textContent = (mac ? 'Hold ⌘ ' : 'Hold Ctrl ') + 'and scroll to zoom, or use the buttons';
+        hint.hidden = false;
+        clearTimeout(hintTimer);
+        hintTimer = setTimeout(function () { hint.hidden = true; hintsLeft--; }, 1400);
+      }
+
+      canvas.addEventListener('wheel', function (e) {
+        // a trackpad pinch arrives as a wheel event with ctrlKey already set
+        if (!e.ctrlKey && !e.metaKey) { showHint(); return; }
+        e.preventDefault();
+        var r = canvas.getBoundingClientRect();
+        zoomTo(view.k * Math.pow(0.999, e.deltaY * (e.deltaMode === 1 ? 20 : 1)), e.clientX - r.left, e.clientY - r.top);
+      }, { passive: false });
+
+      // ---- zoom buttons ----
+      var level = document.getElementById('glevel');
+      function showLevel() {
+        if (!home || !level) return;
+        level.textContent = Math.round((view.k / home.k) * 100) + '%';
+      }
+      function nudge(factor) {
+        var r = canvas.getBoundingClientRect();
+        zoomTo(view.k * factor, r.width / 2, r.height / 2);
+      }
+      document.getElementById('gin').addEventListener('click', function () { nudge(1.35); });
+      document.getElementById('gout').addEventListener('click', function () { nudge(1 / 1.35); });
+
+      // ---- controls ----
+      document.getElementById('greset').addEventListener('click', function () {
+        onlySection = -1;
+        pinned = -1;
+        matches = null;
+        qbox.value = '';
+        setStatus('');
+        Array.prototype.forEach.call(document.querySelectorAll('#glegend button'), function (b) { b.setAttribute('aria-pressed', 'false'); });
+        fit();
+        showLevel();
+        draw();
+      });
+
+      var lbtn = document.getElementById('glabels');
+      lbtn.addEventListener('click', function () {
+        allLabels = !allLabels;
+        lbtn.setAttribute('aria-pressed', String(allLabels));
+        draw();
+      });
+
+      function setStatus(t) { status.textContent = t; }
+
+      qbox.addEventListener('input', function () {
+        var q = qbox.value.trim().toLowerCase();
+        if (!q) { matches = null; setStatus(''); draw(); return; }
+        matches = new Set();
+        for (var i = 0; i < G.nodes.length; i++) if (G.nodes[i].t.toLowerCase().indexOf(q) > -1) matches.add(i);
+        setStatus(matches.size + (matches.size === 1 ? ' match' : ' matches'));
+        if (matches.size === 1) {
+          var only = matches.values().next().value;
+          centreOn(only);
+        }
+        draw();
+      });
+
+      function centreOn(i) {
+        var r = canvas.getBoundingClientRect();
+        view.k = Math.max(view.k, 0.75);
+        view.x = r.width / 2 - G.nodes[i].x * view.k;
+        view.y = r.height / 2 - G.nodes[i].y * view.k;
+        pinned = i;
+        showLevel();
+      }
+
+      document.getElementById('glegend').addEventListener('click', function (e) {
+        var b = e.target.closest('button');
+        if (!b) return;
+        var s = Number(b.dataset.sec);
+        var on = onlySection !== s;
+        onlySection = on ? s : -1;
+        Array.prototype.forEach.call(this.querySelectorAll('button'), function (x) {
+          x.setAttribute('aria-pressed', String(on && Number(x.dataset.sec) === s));
+        });
+        setStatus(on ? G.sections[s] + ' only' : '');
+        draw();
+      });
+
+      new MutationObserver(draw).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', draw);
+      window.addEventListener('resize', resize);
+
+      fetch('/ai/graph.json')
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          G = d;
+          fit();
+          showLevel();
+          resize();
+          var want = new URLSearchParams(location.search).get('term');
+          if (want) {
+            for (var i = 0; i < G.nodes.length; i++) {
+              if (G.nodes[i].s === want) { centreOn(i); setStatus('Centred on ' + G.nodes[i].t); break; }
+            }
+          }
+          draw();
+        })
+        .catch(function () {
+          setStatus('The graph data could not load. The glossary list has everything it shows.');
+        });
+    })();
+  </script>
+</Base>

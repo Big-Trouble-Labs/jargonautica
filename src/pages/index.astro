@@ -1,0 +1,81 @@
+---
+import Base from '../layouts/Base.astro';
+import { allTerms, groupBySection } from '../lib/terms';
+
+const terms = await allTerms();
+const groups = groupBySection(terms);
+
+// a few worth landing on, picked because they turn up everywhere else
+const picks = ['Large Language Model', 'Tokens', 'Transformer', 'Hallucination', 'Fine-tuning', 'Retrieval Augmented Generation'];
+const featured = picks.map((p) => {
+  const found = terms.find((t) => t.title === p);
+  // fail the build rather than quietly drop a card if a term gets renamed
+  if (!found) throw new Error(`Home page features '${p}', but no term has that title.`);
+  return found;
+});
+---
+<Base
+  title="Jargonautica"
+  description="Jargon, explained twice. A plain English glossary of artificial intelligence, with a technical version underneath every entry and every term linked to the ones it depends on."
+>
+  <section class="hero">
+    <h1>Jargon, explained twice.</h1>
+    <p class="lede">
+      Once in plain English, for anyone. Once properly, for people who want to know what is actually
+      happening under the bonnet. No assumed knowledge, no waffle, and every term linked to the ones it
+      depends on.
+    </p>
+    <p class="cta">
+      <a class="btn" href="/ai/">Open the AI glossary</a>
+      <a class="btn ghost" href="/ai/graph/">See the graph</a>
+    </p>
+    <p class="count">{terms.length} terms · {groups.length} sections · free to reuse under CC BY-SA 4.0</p>
+  </section>
+
+  <h2>Start anywhere</h2>
+  <ul class="picks">
+    {featured.map((t: any) => (
+      <li>
+        <a href={`/ai/${t.slug}/`}>
+          <strong>{t.title}</strong>
+          <span>{t.summary}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <h2>How an entry works</h2>
+  <p>
+    The top of every page is the plain version. It avoids jargon, and where it cannot avoid a term it
+    links to that term instead of assuming you know it. Underneath sits a control marked Technical view.
+    Open it and you get the mechanism: the maths, the trade-offs, the things practitioners argue about.
+    Close it and the page stays readable.
+  </p>
+  <p>
+    At the bottom of each entry is a short list of related terms with a line saying why each one is
+    related, which is more useful than a bare list of links, and a small picture of how that term sits in
+    the wider web of terms.
+  </p>
+
+  <h2>Where it comes from</h2>
+  <p>
+    Jargonautica started as one person's notes and got out of hand. It is written and maintained by Big Trouble Labs,
+    published under a Creative Commons licence, and open to{' '}
+    <a href="/suggest/">suggestions for terms that are missing</a>. AI is the first glossary. It will not
+    be the last.
+  </p>
+
+  <style is:global>
+    .hero{padding:1rem 0 2.25rem;border-bottom:1px solid var(--rule);margin-bottom:1rem}
+    .hero h1{font-size:clamp(2.4rem,7vw,3.75rem)}
+    .cta{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.5rem 0 .75rem}
+    .btn{display:inline-block;font-family:var(--display);font-weight:600;font-size:.9375rem;text-decoration:none;padding:.6rem 1rem;border-radius:3px;background:var(--accent);color:var(--ground);border:1px solid var(--accent)}
+    .btn.ghost{background:transparent;color:var(--accent)}
+    .btn:hover{opacity:.88}
+    .picks{list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:.5rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+    .picks a{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:.7rem .85rem;height:100%}
+    .picks a:hover{border-color:var(--accent)}
+    .picks strong{font-family:var(--display);display:block;color:var(--ink)}
+    .picks span{color:var(--ink-3);font-size:.875rem;line-height:1.45;display:block;margin-top:.15rem}
+  </style>
+</Base>

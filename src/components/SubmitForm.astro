@@ -1,0 +1,221 @@
+---
+// One form, three shapes. `kind` decides the fields and what the Worker does
+// with them. Everything else, the honeypot, the credit block and the spam
+// check, is shared.
+import site from '../data/site.json';
+
+const { kind } = Astro.props;
+// The site key is public by design: it is read out of the page source by every
+// visitor. It lives in the repository so it travels with the code. An env var
+// still wins, which is how the dummy testing keys get used locally.
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || site.turnstileSiteKey || '';
+const action = 'suggest-' + kind;
+
+const others = [
+  { kind: 'term', href: '/suggest/', label: 'suggest a term that is missing' },
+  { kind: 'fix', href: '/suggest/fix/', label: 'report a problem with an entry' },
+  { kind: 'glossary', href: '/suggest/glossary/', label: 'propose a whole new glossary' },
+].filter((o) => o.kind !== kind);
+---
+{siteKey && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+
+<form id="submit-form" data-kind={kind} novalidate>
+  {kind === 'term' && (
+    <>
+      <div class="field">
+        <label for="term">The term</label>
+        <input id="term" name="term" required maxlength="80" autocomplete="off" placeholder="Mixture of Experts" />
+        <small>What is it called? If it has an abbreviation, put both.</small>
+      </div>
+      <div class="field">
+        <label for="notes">What you know about it <span class="opt">optional</span></label>
+        <textarea id="notes" name="notes" rows="4" maxlength="1200"
+                  placeholder="A rough sense of what it means, or why it is worth including. Half an answer is more use than none."></textarea>
+      </div>
+      <div class="field">
+        <label for="source">Where you ran into it <span class="opt">optional</span></label>
+        <input id="source" name="source" maxlength="200" autocomplete="off"
+               placeholder="A paper, a product page, a meeting where nobody explained it" />
+      </div>
+    </>
+  )}
+
+  {kind === 'fix' && (
+    <>
+      <div class="field" id="term-field">
+        <label for="term">Which entry</label>
+        <input id="term" name="term" required maxlength="80" autocomplete="off" placeholder="The name of the entry" />
+        <small>Filled in for you if you arrived from the entry itself.</small>
+      </div>
+      <div class="field">
+        <label for="problem">What is wrong</label>
+        <textarea id="problem" name="problem" required rows="4" maxlength="1200"
+                  placeholder="Wrong, out of date, misleading, or explained in a way that does not land. Be as blunt as you like."></textarea>
+      </div>
+      <div class="field">
+        <label for="fix">What it should say <span class="opt">optional</span></label>
+        <textarea id="fix" name="fix" rows="4" maxlength="1200"
+                  placeholder="If you know the right answer, put it here. If you only know the current one is wrong, that is still worth sending."></textarea>
+      </div>
+      <div class="field">
+        <label for="source">Anything that backs it up <span class="opt">optional</span></label>
+        <input id="source" name="source" maxlength="200" autocomplete="off" placeholder="A paper, the documentation, a specification" />
+      </div>
+    </>
+  )}
+
+  {kind === 'glossary' && (
+    <>
+      <div class="field">
+        <label for="term">The subject</label>
+        <input id="term" name="term" required maxlength="80" autocomplete="off" placeholder="Procurement, or structural engineering, or bee-keeping" />
+        <small>A field that invents vocabulary faster than it explains it.</small>
+      </div>
+      <div class="field">
+        <label for="audience">Who would read it <span class="opt">optional</span></label>
+        <input id="audience" name="audience" maxlength="200" autocomplete="off"
+               placeholder="People who have just joined it, or people who have to deal with it from outside" />
+      </div>
+      <div class="field">
+        <label for="notes">Why it needs one <span class="opt">optional</span></label>
+        <textarea id="notes" name="notes" rows="4" maxlength="1200"
+                  placeholder="What goes wrong today because the words are not explained anywhere sensible."></textarea>
+      </div>
+      <div class="field">
+        <label for="help">Would you help write it? <span class="opt">optional</span></label>
+        <select id="help" name="help">
+          <option value="">Not saying yet</option>
+          <option value="yes">Yes, I know the field</option>
+          <option value="some">I would review drafts</option>
+          <option value="no">No, I just think it should exist</option>
+        </select>
+        <small>This is the question that decides whether a glossary happens.</small>
+      </div>
+    </>
+  )}
+
+  <fieldset class="credit">
+    <legend>Credit <span class="opt">optional</span></legend>
+    <p class="small">
+      If this turns into something, the entry says who suggested it. Leave both boxes empty to stay
+      anonymous. We do not ask for your email address and we do not want it.
+    </p>
+    <div class="row">
+      <div class="field">
+        <label for="credit">Name to credit</label>
+        <input id="credit" name="credit" maxlength="60" autocomplete="off" placeholder="Sam, or @samonline" />
+      </div>
+      <div class="field">
+        <label for="link">Link <span class="opt">optional</span></label>
+        <input id="link" name="link" type="url" maxlength="200" autocomplete="off" placeholder="https://" />
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="hp" aria-hidden="true">
+    <label for="website">Leave this empty</label>
+    <input id="website" name="website" tabindex="-1" autocomplete="off" />
+  </div>
+
+  {siteKey && <div class="cf-turnstile" data-sitekey={siteKey} data-action={action} data-theme="auto"></div>}
+
+  <p class="actions">
+    <button class="btn" type="submit" id="send">Send it</button>
+    <span id="msg" class="msg" role="status" aria-live="polite"></span>
+  </p>
+</form>
+
+<p class="elsewhere">
+  Meant to {others.map((o, i) => (
+    <>{i > 0 ? ', or ' : ''}<a href={o.href}>{o.label}</a></>
+  ))}?
+</p>
+
+<script is:inline>
+  (function () {
+    var form = document.getElementById('submit-form');
+    if (!form) return;
+    var kind = form.dataset.kind;
+    var msg = document.getElementById('msg');
+    var send = document.getElementById('send');
+
+    // arriving from an entry: the term is context, not a question
+    var want = new URLSearchParams(location.search).get('term');
+    if (kind === 'fix') {
+      var termField = document.getElementById('term-field');
+      if (want) {
+        document.getElementById('term').value = want;
+        termField.classList.add('fixed');
+        termField.querySelector('label').textContent = 'Reporting a problem with';
+        var small = termField.querySelector('small');
+        if (small) small.remove();
+        document.getElementById('term').readOnly = true;
+        var problem = document.getElementById('problem');
+        if (problem) problem.focus();
+      }
+    } else if (want && kind === 'term') {
+      document.getElementById('term').value = want;
+    }
+
+    function fail(text) {
+      msg.className = 'msg err';
+      msg.textContent = text;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var data = Object.fromEntries(new FormData(form).entries());
+      data.kind = kind;
+
+      var required = kind === 'fix' ? ['term', 'problem'] : ['term'];
+      for (var i = 0; i < required.length; i++) {
+        var el = document.getElementById(required[i]);
+        if (!el.value || el.value.trim().length < 2) {
+          el.closest('.field').classList.add('bad');
+          el.focus();
+          return fail(required[i] === 'problem'
+            ? 'Tell us what is wrong, even roughly.'
+            : 'This one needs a name. Everything else is optional.');
+        }
+        el.closest('.field').classList.remove('bad');
+      }
+
+      var t = form.querySelector('[name="cf-turnstile-response"]');
+      if (t) data['cf-turnstile-response'] = t.value;
+
+      send.disabled = true;
+      msg.className = 'msg';
+      msg.textContent = 'Sending…';
+
+      fetch('/api/suggest', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+        .then(function (r) {
+          return r.text().then(function (text) {
+            var parsed = null;
+            try { parsed = JSON.parse(text); } catch (e) {}
+            return { ok: r.ok, j: parsed };
+          });
+        })
+        .then(function (res) {
+          if (!res.j) throw new Error('That could not reach us.');
+          if (!res.ok || !res.j.ok) throw new Error(res.j.error || 'That did not go through.');
+          var credited = (data.credit || '').trim();
+          form.reset();
+          msg.className = 'msg ok';
+          msg.textContent = credited
+            ? 'Thank you. A person reads every one of these, and if this makes it in you will be credited as ' + credited + '.'
+            : 'Thank you. A person reads every one of these.';
+        })
+        .catch(function (err) {
+          fail(err.message + ' Try again in a moment.');
+        })
+        .then(function () {
+          send.disabled = false;
+          if (window.turnstile) window.turnstile.reset();
+        });
+    });
+  })();
+</script>

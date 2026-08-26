@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import { allTerms } from '../lib/terms';
+
+const terms = await allTerms();
+const suggestions = terms
+  .filter((t) => ['Large Language Model', 'Tokens', 'Agent', 'Training', 'Embeddings', 'Alignment'].includes(t.title));
+---
+<Base title="Not found" description="That page does not exist.">
+  <h1>Nothing here.</h1>
+  <p class="lede">
+    That address does not match a term. It may have been renamed, or the link may be wrong.
+  </p>
+  <p>Press <kbd class="key">/</kbd> to search, <a href="/ai/">browse all {terms.length} terms</a>, or start with one of these:</p>
+  <ul class="picks">
+    {suggestions.map((t) => (
+      <li><a href={`/ai/${t.slug}/`}><strong>{t.title}</strong><span>{t.summary}</span></a></li>
+    ))}
+  </ul>
+  <p>If you followed a link from somewhere else and it broke, <a href="/suggest/fix/">let us know</a>.</p>
+
+  <style is:global>
+    .key{font-family:var(--mono);font-size:.8125rem;border:1px solid var(--rule);border-bottom-width:2px;border-radius:3px;padding:0 .3rem;background:var(--surface)}
+    .picks{list-style:none;padding:0;margin:.5rem 0 1.5rem;display:grid;gap:.5rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+    .picks a{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:.7rem .85rem;height:100%}
+    .picks a:hover{border-color:var(--accent)}
+    .picks strong{font-family:var(--display);display:block;color:var(--ink)}
+    .picks span{color:var(--ink-3);font-size:.875rem;line-height:1.45;display:block;margin-top:.15rem}
+  </style>
+</Base>

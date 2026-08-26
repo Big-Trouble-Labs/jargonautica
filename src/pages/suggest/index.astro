@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro';
+import SubmitForm from '../../components/SubmitForm.astro';
+import { allTerms } from '../../lib/terms';
+
+const terms = await allTerms();
+---
+<Base
+  title="Suggest a term"
+  description="Missing a term? Send it over. A person reads every suggestion, and anyone whose term makes it in gets a credit on the entry."
+>
+  <h1>Suggest a term</h1>
+  <p class="lede">
+    There are {terms.length} terms here and the field moves faster than one person can write. If
+    something is missing, tell us. It takes about thirty seconds.
+  </p>
+
+  <SubmitForm kind="term" />
+
+  <h2>What Happens Next</h2>
+  <p>
+    A person reads it. If the term fits, it gets written up in the same two-level format as everything
+    else, linked to whatever it depends on, and published. If you left a name, that name goes on the
+    entry. If you did not, it goes up anonymously and you have our thanks either way.
+  </p>
+  <p>
+    Nothing is emailed to you, because we never asked for your address. There is no account, no
+    password and no thread to follow. That is deliberate: the cost of suggesting something should be
+    thirty seconds and nothing else.
+  </p>
+  <p>
+    Anything you write here is published under the same
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener">CC BY-SA 4.0</a>{' '}
+    licence as the rest of the glossary. Please do not paste in text you do not have the right to share.
+  </p>
+</Base>

@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+import { allTerms, groupBySection } from '../lib/terms';
+import fs from 'node:fs';
+
+const terms = await allTerms();
+const groups = groupBySection(terms);
+let links = 0;
+try { links = JSON.parse(fs.readFileSync('src/generated/graph.json', 'utf8')).edges.length; } catch {}
+---
+<Base
+  title="About"
+  description="What Jargonautica is, who writes it, how it is built, and the licence that lets you take it and use it."
+>
+  <h1>About</h1>
+  <p class="lede">
+    Jargonautica is a glossary for people who got handed a word and no explanation. Every entry is
+    written twice: once so anyone can follow it, and once so somebody who works in the field is not
+    short-changed.
+  </p>
+
+  <h2>Why Twice</h2>
+  <p>
+    Most glossaries pick a side. Either they are so simplified that they are useless the moment you need
+    to do anything, or they assume you already know the five terms sitting inside the definition. Writing
+    every entry twice sidesteps that. The plain version comes first and never leans on jargon it has not
+    explained. The technical version sits underneath a control you can open when you want it, and it is
+    allowed to be properly technical: the maths, the trade-offs, the arguments practitioners are still
+    having.
+  </p>
+  <p>
+    The other rule is that nothing stands alone. Where an entry depends on another term it links to it,
+    and each entry ends with a handful of related terms and a line explaining why each one is related.
+    There are currently {terms.length} terms and {links} links between them, which is why there is{' '}
+    <a href="/ai/graph/">a graph</a>.
+  </p>
+
+  <h2>Who Writes It</h2>
+  <p>
+    Jargonautica is written and maintained by Big Trouble Labs ('BTL'). It started as one person's notes for keeping track of
+    a field that invents vocabulary faster than it explains it, and grew until it seemed worth putting
+    somewhere public. AI is the first glossary. The format is not specific to AI, so it will not be the
+    last.
+  </p>
+  <p>
+    Anyone whose suggestion turns into an entry is credited on that entry, by whatever name they ask for.
+    <a href="/suggest/">Suggestions are open</a>, and no email address is ever collected.
+  </p>
+
+  <h2>The Licence</h2>
+  <p>
+    The writing is published under{' '}
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener">Creative Commons Attribution-ShareAlike 4.0</a>.
+    In plain terms: take it, copy it, translate it, put it in your onboarding pack, sell a course that
+    uses it. Two conditions. Say where it came from, and if you change it, publish your version under the
+    same licence so the next person has the same freedom you did.
+  </p>
+  <p>
+    The code that turns the notes into this website is separate, and is published under the MIT licence.
+  </p>
+
+  <h2>How It Is Built</h2>
+  <p>
+    The source of truth is a folder of plain text notes in{' '}
+    <a href="https://obsidian.md/" rel="noopener">Obsidian</a>, one file per term, cross-linked the way
+    Obsidian links things. A build script copies those notes across, works out what every link points at,
+    and refuses to publish if a link points at a term that does not exist, if a term has no way in, or if
+    two terms would end up at the same web address.
+  </p>
+  <p>
+    The site itself is <a href="https://astro.build/" rel="noopener">Astro</a>, which turns the notes into
+    ordinary HTML pages ahead of time, and it is hosted on{' '}
+    <a href="https://developers.cloudflare.com/workers/static-assets/" rel="noopener">Cloudflare Workers</a>.
+    There is no database and no content management system. The graph layout is calculated once during the
+    build, so your browser only has to draw it, never work it out.
+  </p>
+  <p>
+    Everything except the suggestion form is a static file, which is the whole security model: there is
+    almost nothing running to attack.
+  </p>
+
+  <h2>Glossaries</h2>
+  <ul class="sections">
+    <li><a href="/ai/">Artificial intelligence</a>: {terms.length} terms in {groups.length} sections. Live.</li>
+    <li>More to come. If you have a field that badly needs one, <a href="/suggest/glossary/">propose it</a>.</li>
+  </ul>
+</Base>

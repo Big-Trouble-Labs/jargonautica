@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allTerms, groupBySection } from '../../lib/terms';
+
+const terms = await allTerms();
+const groups = groupBySection(terms);
+---
+<Base
+  title="AI glossary"
+  description="Every term in the plain English AI glossary, grouped by section. Each one explained twice: once for anyone, once for people who want the mechanism."
+>
+  <h1>AI glossary</h1>
+  <p class="lede">
+    {terms.length} terms across {groups.length} sections. Every one is explained twice: a plain version
+    anybody can follow, and a technical version tucked behind a control for when you want the mechanism.
+  </p>
+  <p class="lede">
+    Press <kbd class="key">/</kbd> to search, or <a href="/ai/graph/">see the whole thing as a graph</a>.
+  </p>
+
+  <ul class="jump">
+    {groups.map((g) => <li><a href={`#${g.anchor}`}>{g.name}</a></li>)}
+  </ul>
+
+  <div class="sections">
+    {groups.map((g) => (
+      <section id={g.anchor}>
+        <h2>{g.name} <span class="count">{g.items.length}</span></h2>
+        <ul>
+          {g.items.map((t) => (
+            <li><a href={`/ai/${t.slug}/`}>{t.title}</a> <span>{t.summary}</span></li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+
+  <style is:global>
+    .key{font-family:var(--mono);font-size:.8125rem;border:1px solid var(--rule);border-bottom-width:2px;border-radius:3px;padding:0 .3rem;background:var(--surface)}
+  </style>
+</Base>

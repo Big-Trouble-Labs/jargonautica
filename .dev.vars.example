@@ -1,0 +1,21 @@
+# Copy this to .dev.vars for local testing with `npx wrangler dev`.
+# .dev.vars is git-ignored and must never be committed.
+
+# A fine-grained GitHub token, scoped to this repository only,
+# with Issues set to read and write. Nothing else.
+GITHUB_TOKEN="github_pat_..."
+
+# Leave this out entirely and the spam check is skipped, which is fine
+# for local testing. In production it must be set.
+# To exercise the real path locally, use Cloudflare's dummy keys:
+#   always passes: 1x0000000000000000000000000000000AA
+#   always fails:  2x0000000000000000000000000000000AA
+TURNSTILE_SECRET=""
+
+# The dummy keys report a hostname of their own, so the production hostname
+# allowlist has to be switched off locally. Leave this empty line in place.
+TURNSTILE_HOSTNAMES=""
+
+# Resend API key, for the notification email. Leave it out and no email is sent,
+# which is fine locally. The submission still succeeds either way.
+RESEND_API_KEY=""
