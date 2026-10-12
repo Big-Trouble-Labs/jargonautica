@@ -26,6 +26,9 @@ Conducted with elicitation designed to maximise measured capability, including f
 - [[Red Teaming]]: the elicitation methods used
 - [[AI Safety Institutes]]: who else runs them
 - [[Benchmarks and Evals]]: the wider practice
+- [[Capability Elicitation]]: why results may understate the ceiling
+- [[Sandbagging]]: deliberate underperformance that undermines it
+- [[Frontier AI]]: the models it is mostly applied to
 
 ---
 

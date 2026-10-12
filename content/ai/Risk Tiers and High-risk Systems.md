@@ -27,6 +27,7 @@ Tiers typically run from prohibited practices, through high-risk uses in areas s
 - [[Human in the Loop]]: an explicit requirement in high-risk uses
 - [[Bias]]: a central concern in the listed high-risk domains
 - [[Model Card]]: the documentation obligation that follows
+- [[Conformity Assessment]]: the check high-risk systems must pass
 
 ---
 

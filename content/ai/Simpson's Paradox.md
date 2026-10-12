@@ -23,6 +23,7 @@ Arises from a confounding variable associated with both group membership and out
 - [[Bias]]: the argument for disaggregated evaluation
 - [[Causal Inference]]: confounders and how to handle them
 - [[Error Analysis]]: why aggregate scores hide subgroup behaviour
+- [[Survivorship Bias]]: another way selection distorts conclusions
 
 ---
 

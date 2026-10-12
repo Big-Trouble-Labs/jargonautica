@@ -24,6 +24,7 @@ Requires per-tenant scoping of retrieval indexes or mandatory metadata filters e
 - [[Caching]]: cache keys must include tenant identity
 - [[Data Residency and Confidentiality]]: the customer-facing commitment
 - [[Data Exfiltration]]: the cross-tenant failure mode
+- [[Confidential Computing]]: hardware-enforced isolation between workloads
 
 ---
 

@@ -27,6 +27,7 @@ Produced by diffusion models and voice cloning systems that need very little ref
 - [[Provenance and Watermarking]]: the main proposed countermeasure
 - [[Generative AI]]: the wider category
 - [[Multimodal]]: the capability that makes it convincing
+- [[Misinformation and Disinformation]]: the wider problem deepfakes feed
 
 ---
 

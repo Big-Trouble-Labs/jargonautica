@@ -26,6 +26,8 @@ Applies to tool exposure, credential scope and data access. Practical measures i
 - [[Prompt Injection]]: why authority must be limited
 - [[Tenant Isolation]]: the same principle across customers
 - [[Agent]]: what holds the permissions
+- [[Zero Trust]]: the wider security model it belongs to
+- [[Authentication and Authorisation]]: the mechanism that enforces it
 
 ---
 

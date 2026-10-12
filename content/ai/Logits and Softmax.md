@@ -27,6 +27,7 @@ Logits are the unnormalised outputs of the final linear layer. Softmax exponenti
 - [[Structured Output]]: constrained decoding masks logits
 - [[Activation Function]]: softmax is the output-layer activation
 - [[Perplexity]]: computed from these probabilities
+- [[Attention Sink]]: a side effect of weights summing to one
 
 ---
 

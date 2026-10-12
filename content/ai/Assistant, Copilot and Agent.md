@@ -27,6 +27,8 @@ They differ in who initiates, how much context the system holds, and how reversi
 - [[Human in the Loop]]: how supervision differs by shape
 - [[Use Case Selection]]: choosing the right shape for the job
 - [[Trust Calibration]]: each sets different expectations
+- [[Levels of Autonomy]]: a more graded version of the same distinction
+- [[Human-AI Teaming]]: designing how each works alongside people
 
 ---
 

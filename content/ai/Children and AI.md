@@ -24,6 +24,7 @@ Regulatory hooks include children's data codes requiring high-privacy defaults a
 - [[Data Subject Rights]]: children's data protections
 - [[Deskilling]]: effects on learning
 - [[Transparency and Disclosure Obligations]]: age assurance and disclosure
+- [[AI in Education]]: the main setting where children meet it
 
 ---
 

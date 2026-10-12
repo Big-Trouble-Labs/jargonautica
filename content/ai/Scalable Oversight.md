@@ -24,6 +24,8 @@ Approaches include decomposing a task into checkable parts, using models to assi
 - [[Weak-to-strong Generalisation]]: the empirical study of the same question
 - [[LLM as a Judge]]: models assisting evaluation
 - [[Constitutional AI]]: principles as a scaling device
+- [[Outer and Inner Alignment]]: the outer half of the problem it targets
+- [[AI Control]]: the complementary approach that assumes the model may be adversarial
 
 ---
 

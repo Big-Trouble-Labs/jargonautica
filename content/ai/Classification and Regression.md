@@ -28,6 +28,7 @@ Classification outputs a distribution over discrete classes, typically trained w
 - [[Accuracy, Precision and Recall]]: how classification gets measured
 - [[Linear and Logistic Regression]]: the simplest model of each kind
 - [[Confusion Matrix]]: where classification errors get broken down
+- [[Sentiment Analysis]]: a common text classification example
 
 ---
 

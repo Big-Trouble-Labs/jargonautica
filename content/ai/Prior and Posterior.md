@@ -26,6 +26,7 @@ In Bayesian inference, distributions over parameters before and after conditioni
 - [[Regularisation and Dropout]]: regularisation as a prior on weights
 - [[Aleatoric and Epistemic Uncertainty]]: what uncertainty over parameters means
 - [[Base Rate Fallacy]]: the cost of neglecting the prior
+- [[Maximum Likelihood Estimation]]: the estimate you get without a prior
 
 ---
 

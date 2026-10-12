@@ -23,6 +23,7 @@ Underlying signals include token probabilities, agreement across sampled generat
 - [[Trust Calibration]]: the goal it serves
 - [[Grounding and Citation]]: evidence as an alternative to a number
 - [[Automation Bias]]: what poor display encourages
+- [[Human-computer Interaction]]: the design field behind it
 
 ---
 

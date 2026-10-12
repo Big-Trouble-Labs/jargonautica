@@ -23,6 +23,7 @@ For binary classification a two-by-two table of true and false positives and neg
 - [[F1 Score]]: also derived from it
 - [[Classification and Regression]]: the problem type it applies to
 - [[Bias]]: per-group matrices are how disparate performance shows up
+- [[ROC Curve and AUC]]: the view across every threshold
 
 ---
 

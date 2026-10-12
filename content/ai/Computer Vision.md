@@ -24,6 +24,9 @@ Core tasks are classification, object detection, segmentation, tracking and dept
 - [[Deep Learning]]: the field vision proved out in 2012
 - [[Adversarial Examples]]: its most striking failure mode
 - [[Optical Character Recognition]]: a specialised branch of it
+- [[Image Segmentation]]: outlining objects at pixel level
+- [[Object Detection]]: locating and labelling objects
+- [[Geospatial AI]]: applied to satellite and aerial imagery
 
 ---
 

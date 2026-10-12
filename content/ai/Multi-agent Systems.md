@@ -27,6 +27,8 @@ Common patterns include an orchestrator delegating to specialist workers, sequen
 - [[Cost Per Task]]: the cost that multiplies fastest
 - [[Tool Use and Function Calling]]: how the pieces act
 - [[Model Context Protocol]]: the standard way they reach tools
+- [[Agent-to-agent Protocol]]: a standard for agents from different vendors to cooperate
+- [[Game Theory]]: the theory of strategic interaction
 
 ---
 

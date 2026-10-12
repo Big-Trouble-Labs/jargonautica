@@ -25,6 +25,7 @@ A generator and discriminator are trained in opposition towards an equilibrium. 
 - [[Generative AI]]: the category it belongs to
 - [[Neural Network]]: the structure both halves are built from
 - [[Training]]: where its notorious instability shows up
+- [[Game Theory]]: its training as a two-player game
 
 ---
 

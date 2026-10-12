@@ -24,6 +24,8 @@ The gap between training and test performance under the assumption that both are
 - [[Inductive Bias]]: what makes it possible at all
 - [[Double Descent]]: why capacity and generalisation are not simply opposed
 - [[Interpolation and Extrapolation]]: the limits of where it holds
+- [[Shortcut Learning]]: a common reason it fails
+- [[Goal Misgeneralisation]]: when capability generalises but the goal does not
 
 ---
 

@@ -23,6 +23,7 @@ Combines a supervised phase, where the model self-critiques and revises against 
 - [[Reinforcement Learning from AI Feedback]]: the mechanism it uses
 - [[Reflection and Self-critique]]: self-revision against principles
 - [[Scalable Oversight]]: principles as a way of scaling human judgement
+- [[Model Specification]]: the broader document such principles sit in
 
 ---
 

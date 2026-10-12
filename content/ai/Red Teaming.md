@@ -24,6 +24,9 @@ Combines manual adversarial probing by domain specialists with automated attack 
 - [[Alignment]]: the property being stress-tested
 - [[Benchmarks and Evals]]: the scored counterpart to adversarial testing
 - [[Prompt Injection]]: one of the attack classes covered
+- [[Capability Elicitation]]: the effort to find the true capability ceiling
+- [[Bug Bounty]]: the crowdsourced, paid-per-finding counterpart
+- [[Model Organisms]]: deliberately built failures to test against
 
 ---
 

@@ -28,6 +28,8 @@ Also called the objective or cost function. Standard choices are cross-entropy f
 - [[Training]]: the process of driving this number down
 - [[Overfitting]]: diagnosed by comparing training and validation loss
 - [[Perplexity]]: the language model measure derived from it
+- [[Maximum Likelihood Estimation]]: the statistical principle behind most losses
+- [[Loss Landscape]]: its shape across all parameter settings
 
 ---
 

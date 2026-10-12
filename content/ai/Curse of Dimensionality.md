@@ -23,6 +23,7 @@ As dimension grows, volume concentrates near the boundary of a region, pairwise 
 - [[K-Nearest Neighbours]]: the method most damaged by it
 - [[Embeddings]]: why learned low-dimensional representations help
 - [[Vector]]: the space in question
+- [[Manifold Hypothesis]]: why real data often escapes it
 
 ---
 

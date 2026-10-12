@@ -25,6 +25,7 @@ The root cause is architectural: a language model receives instructions and data
 - [[Agent]]: the risk multiplies once a system can act
 - [[Tool Use and Function Calling]]: outside content arriving through tools
 - [[Guardrails]]: the standard partial defence
+- [[System Prompt Extraction]]: a common goal of injection attempts
 
 ---
 

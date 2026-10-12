@@ -23,6 +23,7 @@ Parameters are updated in the direction opposite the gradient, scaled by a learn
 - [[Epoch, Batch and Learning Rate]]: the settings that govern each step
 - [[Training]]: the wider process this drives
 - [[Overfitting]]: what happens if you keep descending too long
+- [[Loss Landscape]]: the terrain it walks across
 
 ---
 

@@ -27,6 +27,7 @@ C2PA content credentials are cryptographically signed manifests carried in file 
 - [[Copyright and Training Data]]: the ownership side of the same question
 - [[Transparency and Disclosure Obligations]]: the regulation driving adoption
 - [[Synthetic Data]]: knowing what is machine-made matters for training too
+- [[Misinformation and Disinformation]]: what it is meant to counter
 
 ---
 

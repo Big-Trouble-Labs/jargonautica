@@ -24,6 +24,7 @@ Arises when authority is ambient rather than tied to the requester's identity, s
 - [[Agent]]: the deputy in question
 - [[Tool Use and Function Calling]]: the authority being borrowed
 - [[Threat Model]]: the framing that makes it visible
+- [[Authentication and Authorisation]]: the checks it bypasses
 
 ---
 

@@ -27,6 +27,7 @@ The stack spans perception, state estimation, planning and control. Learning-bas
 - [[World Model]]: what planning depends on
 - [[Multimodal]]: vision, language and action in one model
 - [[Foundation Model]]: the method now being applied to control
+- [[Autonomous Vehicles]]: the most visible case of embodied AI
 
 ---
 

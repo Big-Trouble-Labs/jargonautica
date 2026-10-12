@@ -27,6 +27,7 @@ Rights include access, rectification, erasure, restriction, portability and obje
 - [[Retention Policy]]: deletion in practice
 - [[Data Lineage]]: finding every copy
 - [[Memory]]: stored personalisation as personal data
+- [[General Data Protection Regulation]]: the regulation that grants them
 
 ---
 

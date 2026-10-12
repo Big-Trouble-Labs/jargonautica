@@ -26,6 +26,7 @@ General language models now match or exceed dedicated translation systems on man
 - [[Language Coverage]]: where it still fails
 - [[Beam Search]]: the standard decoding method
 - [[Benchmarks and Evals]]: the shift to learned metrics
+- [[BLEU and ROUGE]]: the classic automatic metric
 
 ---
 

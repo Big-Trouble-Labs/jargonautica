@@ -26,6 +26,8 @@ Methods include gradient-based saliency, integrated gradients, and game-theoreti
 - [[Right to Explanation]]: where such methods are proposed as answers
 - [[Attention]]: attention weights are not explanations
 - [[Chain-of-thought Faithfulness]]: the same gap between story and mechanism
+- [[Feature Importance]]: the aggregate, dataset-wide view
+- [[Game Theory]]: where Shapley values come from
 
 ---
 

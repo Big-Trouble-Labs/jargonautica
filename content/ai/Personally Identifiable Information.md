@@ -27,6 +27,7 @@ Direct identifiers name a person; quasi-identifiers identify in combination, whi
 - [[Data Subject Rights]]: the rights attached to it
 - [[Secrets Management]]: the same discipline for credentials
 - [[Model Extraction and Membership Inference]]: how models can leak it
+- [[General Data Protection Regulation]]: the law that governs it in Europe
 
 ---
 

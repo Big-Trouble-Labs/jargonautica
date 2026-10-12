@@ -24,6 +24,8 @@ Trained on pairwise human preference data, usually initialised from the policy m
 - [[Data Labelling and Annotation]]: preference data as its training set
 - [[Direct Preference Optimisation]]: the method that removes the need for one
 - [[Sycophancy]]: a bias it commonly encodes
+- [[Preference Data]]: the comparisons it is trained on
+- [[Process Reward Model]]: the step-level variant
 
 ---
 

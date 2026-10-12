@@ -23,6 +23,7 @@ Access barriers include connectivity, device capability, subscription cost, and 
 - [[Accessibility]]: the counter-effect
 - [[Small Language Model]]: cheap capability on modest hardware
 - [[Cost Per Task]]: why quality is stratified by price
+- [[AI in Education]]: unequal access in schools
 
 ---
 

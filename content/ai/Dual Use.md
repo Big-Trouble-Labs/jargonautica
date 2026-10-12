@@ -24,6 +24,9 @@ Concentrated in cyber, chemical, biological, radiological and nuclear domains, a
 - [[Open and Closed Debate]]: the release argument it drives
 - [[Refusal and Over-refusal]]: the cost of blunt restriction
 - [[Responsible Scaling Policy]]: the framework that responds to it
+- [[AI-enabled Cyber Attacks]]: the offensive side of cyber capability
+- [[Protein Structure Prediction]]: protein tools as a biology case
+- [[Geospatial AI]]: satellite analysis as an example
 
 ---
 

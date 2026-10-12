@@ -28,6 +28,7 @@ Encoder-only models such as BERT use bidirectional attention and masked language
 - [[Embeddings]]: what encoder-only models are mostly used for
 - [[Large Language Model]]: almost always decoder-only
 - [[Positional Encoding]]: needed by all three
+- [[Masked Language Modelling]]: how encoder models are pre-trained
 
 ---
 

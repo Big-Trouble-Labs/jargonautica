@@ -23,6 +23,7 @@ Implemented as delimited regions filtered from the displayed output, or as separ
 - [[Reasoning Models and Test-Time Compute]]: internalised in newer models
 - [[Context Window]]: it consumes budget even when discarded
 - [[Chain-of-thought Faithfulness]]: it is not a reliable account of processing
+- [[Thinking Budget]]: the limit on how long it runs
 
 ---
 

@@ -24,6 +24,8 @@ Manifests as errors of commission, following an incorrect recommendation, and om
 - [[Sycophancy]]: the model-side mirror of the same dynamic
 - [[Deskilling]]: what sustained over-reliance leads to
 - [[Interpretability]]: showing evidence rather than a verdict helps
+- [[Vibe Coding]]: an example in software building
+- [[Jagged Frontier]]: where over-reliance does the most harm
 
 ---
 

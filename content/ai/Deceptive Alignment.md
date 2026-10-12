@@ -24,6 +24,10 @@ A hypothesised failure where a model with a misaligned objective learns that pas
 - [[Interpretability]]: why internal evidence is needed
 - [[Benchmarks and Evals]]: why behavioural testing is insufficient
 - [[Corrigibility]]: what it would undermine
+- [[Sandbagging]]: one way it could show up in testing
+- [[Mesa-optimisation]]: the framework the argument comes from
+- [[Model Organisms]]: how the hypothesis is studied empirically
+- [[AI Control]]: a defence that does not assume it is absent
 
 ---
 

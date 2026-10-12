@@ -27,6 +27,7 @@ Also called an evaluation or regression set. It should cover typical cases, know
 - [[Machine Learning Operations]]: running it as a regression test
 - [[Model Deprecation]]: what makes a model migration measurable
 - [[Prompt Engineering]]: what turns prompt changes from opinion into evidence
+- [[Ground Truth]]: what the set's answers are treated as
 
 ---
 

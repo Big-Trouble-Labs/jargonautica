@@ -23,6 +23,7 @@ An element of a vector space, supporting addition and scalar multiplication. In 
 - [[Dot Product and Cosine Similarity]]: how vectors get compared
 - [[Matrix and Tensor]]: what you get when you stack them
 - [[Dimensionality Reduction]]: squeezing vectors down to fewer numbers
+- [[Linear Algebra]]: the wider branch of maths vectors belong to
 
 ---
 

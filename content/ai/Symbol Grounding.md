@@ -24,6 +24,7 @@ Harnad's formulation asks how symbols acquire meaning without an infinite regres
 - [[Robotics and Embodied AI]]: grounding through action
 - [[World Model]]: whether internal structure amounts to grounding
 - [[Stochastic Parrot]]: the critique that depends on it
+- [[Cognitive Science]]: the field the problem comes from
 
 ---
 

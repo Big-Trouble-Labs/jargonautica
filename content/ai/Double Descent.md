@@ -23,6 +23,7 @@ Test error follows a classical bias-variance U-curve up to the interpolation thr
 - [[Scaling Laws]]: part of why scaling kept working
 - [[Generalisation]]: the property being explained
 - [[Grokking]]: a related surprise about training length
+- [[Bias-Variance Trade-off]]: the classic picture it complicates
 
 ---
 

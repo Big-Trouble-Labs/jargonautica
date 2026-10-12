@@ -24,6 +24,8 @@ Appropriate reliance is measured by whether users accept correct outputs and rej
 - [[Grounding and Citation]]: evidence supports calibration
 - [[Expectation Setting]]: setting the prior correctly
 - [[Human in the Loop]]: what makes oversight meaningful
+- [[AI Literacy]]: the wider understanding that supports it
+- [[Jagged Frontier]]: why trust must be set task by task
 
 ---
 

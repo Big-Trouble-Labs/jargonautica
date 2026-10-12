@@ -26,6 +26,7 @@ The ordered record of states, actions and observations for a task episode. Used 
 - [[Audit Logging]]: the record that matters for agents
 - [[Handoff]]: attributing failures to transfers
 - [[Retention Policy]]: trajectories contain sensitive data
+- [[Long-horizon Tasks]]: tasks whose trajectories run to hundreds of steps
 
 ---
 

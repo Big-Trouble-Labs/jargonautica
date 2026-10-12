@@ -24,6 +24,7 @@ Representations learned on a large general task transfer because early and middl
 - [[Foundation Model]]: transfer learning at industrial scale
 - [[Catastrophic Forgetting]]: the main way it goes wrong
 - [[Deep Learning]]: why the learned features transfer at all
+- [[Parameter-efficient Fine-tuning]]: an efficient way to adapt large models
 
 ---
 

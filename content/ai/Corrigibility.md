@@ -24,6 +24,7 @@ The difficulty is that shutdown-acceptance conflicts with goal achievement for a
 - [[Human in the Loop]]: the practical version of correction
 - [[Scalable Oversight]]: supervision that a system must accept
 - [[Deceptive Alignment]]: apparent corrigibility that is not real
+- [[Value Lock-in]]: the long-run harm that lack of correction could cause
 
 ---
 

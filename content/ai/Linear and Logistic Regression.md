@@ -27,6 +27,7 @@ Both are generalised linear models: a weighted sum of inputs, with logistic regr
 - [[Neural Network]]: logistic regression is a single-unit version of one
 - [[Feature Engineering]]: what these models depend on to handle non-linearity
 - [[Loss Function]]: cross-entropy and squared error respectively
+- [[Perceptron]]: a cousin with a hard threshold
 
 ---
 

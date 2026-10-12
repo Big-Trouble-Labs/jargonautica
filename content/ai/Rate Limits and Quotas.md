@@ -26,6 +26,8 @@ Typically enforced per organisation and model across several dimensions at once,
 - [[Inference]]: what is being limited
 - [[Agent]]: the pattern that hits limits first
 - [[Machine Learning Operations]]: where backoff and queueing get built
+- [[Application Programming Interface]]: the interface they apply to
+- [[AI Gateway]]: a central place to enforce them
 
 ---
 

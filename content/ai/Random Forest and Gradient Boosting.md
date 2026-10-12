@@ -28,6 +28,7 @@ Random forests reduce variance through bootstrap aggregation and random feature 
 - [[Overfitting]]: what boosting risks without early stopping
 - [[Hyperparameters]]: boosting is unusually sensitive to them
 - [[Deep Learning]]: the alternative these still beat on tabular data
+- [[Feature Importance]]: the importance scores these models report
 
 ---
 

@@ -24,6 +24,8 @@ Tracks the flow of data across sources, transformations and consumers, at table,
 - [[Audit Logging]]: the record that supports explanation
 - [[Data Pipeline]]: what lineage is tracked across
 - [[Data Subject Rights]]: finding every copy of a person's data
+- [[Data Governance]]: the wider framework lineage supports
+- [[Datasheets for Datasets]]: documentation that records provenance
 
 ---
 

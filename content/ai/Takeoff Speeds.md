@@ -23,6 +23,7 @@ Fast takeoff scenarios posit a discontinuous jump driven by recursive improvemen
 - [[Existential Risk]]: the disagreement it usually explains
 - [[Emergent Capabilities]]: discontinuity as evidence
 - [[Artificial General Intelligence]]: the destination in question
+- [[Gradual Disempowerment]]: a risk that does not need a fast takeoff
 
 ---
 

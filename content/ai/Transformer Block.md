@@ -24,6 +24,7 @@ In the pre-normalisation arrangement now standard, each sub-layer computes norma
 - [[Feed-forward Network]]: the second sub-layer
 - [[Residual Connection]]: what carries information between them
 - [[Layer Normalisation]]: where it is applied
+- [[Multi-head Attention]]: the attention sub-layer inside it
 
 ---
 

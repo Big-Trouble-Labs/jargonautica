@@ -24,6 +24,9 @@ Design choices include where the checkpoint sits, what the reviewer is shown, an
 - [[Guardrails]]: the automated counterpart
 - [[Alignment]]: human judgement as the reference point
 - [[Golden Dataset]]: review decisions become evaluation data
+- [[Levels of Autonomy]]: where the person sits on the scale
+- [[Approval Gates]]: the commonest concrete form of the checkpoint
+- [[Human-AI Teaming]]: the broader design discipline it sits within
 
 ---
 

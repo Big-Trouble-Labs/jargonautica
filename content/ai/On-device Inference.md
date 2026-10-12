@@ -27,6 +27,7 @@ Constrained mainly by memory capacity and bandwidth rather than arithmetic throu
 - [[Inference]]: the general stage this is a variety of
 - [[Data Residency and Confidentiality]]: the strongest version of keeping data local
 - [[Graphics Processing Unit]]: the hardware constraint, in miniature
+- [[Field-programmable Gate Array]]: hardware used for low-latency edge inference
 
 ---
 

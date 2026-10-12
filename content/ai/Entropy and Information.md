@@ -27,6 +27,8 @@ Shannon entropy is the expected number of bits needed to encode outcomes from a 
 - [[Kullback-Leibler Divergence]]: the closely related quantity
 - [[Probability Distribution]]: what entropy measures
 - [[Decision Tree]]: information gain as the splitting criterion
+- [[Maximum Likelihood Estimation]]: why minimising cross-entropy maximises likelihood
+- [[Mutual Information]]: the information two variables share
 
 ---
 

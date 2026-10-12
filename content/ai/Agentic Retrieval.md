@@ -26,6 +26,7 @@ An iterative loop where the model issues queries, evaluates retrieved evidence f
 - [[Agent]]: the loop it belongs to
 - [[Budget Caps]]: why iteration needs limits
 - [[Trajectory]]: what has to be evaluated
+- [[Deep Research Agent]]: the product pattern built on it
 
 ---
 

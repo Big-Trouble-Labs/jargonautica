@@ -27,6 +27,8 @@ Typically covers intended and out-of-scope uses, training data at a high level, 
 - [[Open Weights]]: documentation expected alongside a release
 - [[Red Teaming]]: safety testing a card should describe
 - [[Machine Learning Operations]]: documentation as part of running things properly
+- [[Datasheets for Datasets]]: the companion document for datasets
+- [[Algorithmic Transparency Recording Standard]]: a public sector counterpart
 
 ---
 

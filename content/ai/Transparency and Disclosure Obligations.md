@@ -26,6 +26,7 @@ Requirements arrive from several directions at once: AI-specific regulation, exi
 - [[Model Card]]: disclosure at model level
 - [[Interpretability]]: why meaningful explanation is hard to provide
 - [[Human in the Loop]]: what disclosure about automated decisions usually points to
+- [[Algorithmic Transparency Recording Standard]]: the United Kingdom public sector's version
 
 ---
 

@@ -26,6 +26,7 @@ The probability of observing data at least as extreme as yours under the null hy
 - [[Controlled Experiment]]: where it is most used and misused
 - [[Benchmarks and Evals]]: why small benchmark gaps mean little
 - [[Baseline]]: significance against what
+- [[Regression to the Mean]]: a source of apparent effects that are only noise
 
 ---
 

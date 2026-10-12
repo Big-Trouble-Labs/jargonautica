@@ -26,6 +26,8 @@ Each unit computes a weighted sum of its inputs plus a bias term, then passes th
 - [[Deep Learning]]: what you get when you stack many layers
 - [[Backpropagation]]: how the network works out what to change
 - [[Interpretability]]: the effort to understand what goes on inside one
+- [[Universal Approximation Theorem]]: the result behind its flexibility
+- [[Perceptron]]: the earliest learning unit
 
 ---
 

@@ -24,6 +24,7 @@ A subgraph of components, typically attention heads and feed-forward layers, who
 - [[Attention]]: induction heads as the best known example
 - [[Residual Connection]]: the stream circuits read and write
 - [[Feature (Interpretability Sense)]]: the units circuits connect
+- [[Induction Head]]: the best known example
 
 ---
 

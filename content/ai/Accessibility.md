@@ -24,6 +24,7 @@ Capabilities include automatic captioning and transcription, image and scene des
 - [[Machine Translation]]: language access
 - [[Digital Divide]]: the counterweight to it
 - [[Model Confidence and Calibration]]: confident wrong descriptions are the risk
+- [[Human-computer Interaction]]: the wider field of usable design
 
 ---
 

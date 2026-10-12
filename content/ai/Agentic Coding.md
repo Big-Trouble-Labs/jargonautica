@@ -26,6 +26,7 @@ Requires repository navigation and search, file editing, command execution in a 
 - [[Agent]]: the general pattern
 - [[Pass@k]]: the measurement approach
 - [[Recursive Self-improvement]]: the concrete near-term version
+- [[Vibe Coding]]: the looser, unreviewed version
 
 ---
 

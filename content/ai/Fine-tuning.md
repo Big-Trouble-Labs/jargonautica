@@ -27,6 +27,8 @@ Full fine-tuning updates all parameters and is expensive. Parameter-efficient me
 - [[Retrieval Augmented Generation]]: the better tool when you need facts rather than style
 - [[Reinforcement Learning from Human Feedback]]: the preference-based stage that follows
 - [[Overfitting]]: the risk when the fine-tuning set is small
+- [[Parameter-efficient Fine-tuning]]: cheaper variants that train few parameters
+- [[Emergent Misalignment]]: how narrow fine-tuning can cause broad harm
 
 ---
 

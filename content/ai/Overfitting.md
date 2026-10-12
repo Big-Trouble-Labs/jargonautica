@@ -24,6 +24,7 @@ This is the bias-variance trade-off. It is detected by watching training loss co
 - [[Benchmarks and Evals]]: how it is detected on held-out data
 - [[Fine-tuning]]: a common place to run into it on small datasets
 - [[Gradient Descent]]: the process that will happily keep memorising
+- [[Bias-Variance Trade-off]]: the high-variance side of the trade-off
 
 ---
 

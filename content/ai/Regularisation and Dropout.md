@@ -29,6 +29,7 @@ L2 regularisation, or weight decay, penalises large weights and produces smoothe
 - [[Training, Validation and Test Sets]]: early stopping watches validation loss
 - [[Loss Function]]: where the penalty term is added
 - [[Training]]: the stage these apply during
+- [[Bias-Variance Trade-off]]: the trade-off these manage
 
 ---
 

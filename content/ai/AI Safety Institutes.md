@@ -23,6 +23,8 @@ Functions include pre-deployment testing under agreement with developers, publis
 - [[International AI Safety Report]]: the shared evidence base
 - [[AI Assurance and Auditing]]: independent assessment
 - [[Responsible Scaling Policy]]: voluntary developer commitments they test
+- [[Frontier AI]]: the class of models they test
+- [[AI Safety Summits]]: the meetings that prompted several of them
 
 ---
 

@@ -24,6 +24,7 @@ Studied in aviation as automation-induced skill degradation and addressed there 
 - [[Displacement and Augmentation]]: the labour market context
 - [[Human in the Loop]]: oversight requires the skill being lost
 - [[Agent]]: the more work is delegated, the sharper the effect
+- [[AI in Education]]: the learning version of the concern
 
 ---
 

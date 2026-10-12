@@ -25,6 +25,7 @@ A position-wise two-layer network, expanding to roughly four times the model dim
 - [[Attention]]: the other half of the block
 - [[Mixture of Experts]]: what replaces this component when routed
 - [[Circuit]]: where factual knowledge appears to be stored
+- [[Universal Approximation Theorem]]: the theorem about what it can represent
 
 ---
 

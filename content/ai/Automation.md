@@ -24,6 +24,7 @@ Literature on levels of automation runs from advisory through to full autonomy w
 - [[Workflow Versus Agent]]: how much autonomy to grant
 - [[Human in the Loop]]: partial automation and its difficulties
 - [[Deskilling]]: the long-run effect on the people involved
+- [[No-code and Low-code]]: a common way automations are built
 
 ---
 

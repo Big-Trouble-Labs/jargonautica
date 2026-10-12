@@ -26,6 +26,7 @@ Formally a subset of unsupervised learning, since no external labels are supplie
 - [[Large Language Model]]: what this trick made possible
 - [[Training Corpus]]: why unlimited raw text became usable
 - [[Tokens]]: the units hidden and predicted
+- [[Masked Language Modelling]]: the classic objective for text encoders
 
 ---
 

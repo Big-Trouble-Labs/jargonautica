@@ -23,6 +23,7 @@ An encoder maps input to a lower-dimensional latent code and a decoder reconstru
 - [[Variational Autoencoder]]: the probabilistic extension
 - [[Anomaly Detection]]: reconstruction error as a signal
 - [[Sparse Autoencoder]]: the deliberate inversion used in interpretability
+- [[Manifold Hypothesis]]: the hypothesis that motivates it
 
 ---
 

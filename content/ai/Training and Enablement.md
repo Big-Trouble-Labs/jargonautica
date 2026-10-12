@@ -24,6 +24,7 @@ Effective programmes are role-specific rather than generic, use the organisation
 - [[Acceptable Use Policy]]: the policy content to cover
 - [[Shadow AI]]: what a lack of enablement produces
 - [[Prompt Template]]: shared vetted patterns
+- [[AI Literacy]]: the legal duty it can help meet
 
 ---
 

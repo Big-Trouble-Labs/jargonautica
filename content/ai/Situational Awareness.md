@@ -23,6 +23,7 @@ Encompasses self-identification, awareness of the deployment context, and infere
 - [[Benchmarks and Evals]]: why evaluation must be realistic
 - [[Dangerous Capability Evaluation]]: results conditional on being observed
 - [[Theory of Mind]]: the related capability
+- [[Sandbagging]]: what it would let a model do under test
 
 ---
 

@@ -24,6 +24,9 @@ Implemented by embedding queries and documents into the same space and ranking b
 - [[Reranking]]: the accuracy pass on top
 - [[Retrieval Augmented Generation]]: its main use in language systems
 - [[Encoder, Decoder and Encoder-Decoder]]: encoder-only models do this cheaply
+- [[Inverted Index]]: the keyword structure it is compared with
+- [[Approximate Nearest Neighbour Search]]: how matches are found quickly
+- [[Information Retrieval]]: the parent field
 
 ---
 

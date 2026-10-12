@@ -23,6 +23,7 @@ Measured by Cohen's kappa for two raters, Fleiss' kappa for more, or Krippendorf
 - [[Rubric]]: unclear rubrics cause low agreement
 - [[Data Labelling and Annotation]]: the same measure for training labels
 - [[LLM as a Judge]]: validating a judge against humans
+- [[Ground Truth]]: why disagreement undermines it
 
 ---
 

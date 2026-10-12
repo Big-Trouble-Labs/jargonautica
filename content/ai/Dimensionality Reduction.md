@@ -26,6 +26,8 @@ Principal component analysis finds orthogonal directions of maximum variance and
 - [[Embeddings]]: the same idea reached from the other direction
 - [[Clustering]]: commonly applied together
 - [[Neural Network]]: autoencoders are the neural version of this
+- [[Singular Value Decomposition]]: the decomposition behind principal component analysis
+- [[Manifold Hypothesis]]: the assumption that makes it work
 
 ---
 

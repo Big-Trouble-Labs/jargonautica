@@ -28,6 +28,8 @@ The decisive specifications are memory capacity, which bounds model size, memory
 - [[On-device Inference]]: where small accelerators are used
 - [[Chip Export Controls]]: the geopolitics of access
 - [[Data Centre and Interconnect]]: how they are wired together
+- [[Field-programmable Gate Array]]: a reconfigurable alternative
+- [[Quantum Machine Learning]]: a speculative future hardware route
 
 ---
 

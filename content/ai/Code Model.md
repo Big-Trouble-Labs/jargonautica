@@ -24,6 +24,7 @@ Trained on large code corpora with objectives including fill-in-the-middle, whic
 - [[Code Execution]]: verification by running it
 - [[Large Language Model]]: the general family
 - [[Data Mixture]]: code improves general reasoning
+- [[Vibe Coding]]: a popular informal way of using them
 
 ---
 

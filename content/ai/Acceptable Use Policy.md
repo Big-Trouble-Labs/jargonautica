@@ -26,6 +26,7 @@ Provider policies typically prohibit categories such as weapons development, tar
 - [[Data Licensing]]: the provider terms it inherits
 - [[Transparency and Disclosure Obligations]]: often specified in the same document
 - [[Alignment]]: the model-side version of the same rules
+- [[Model Specification]]: the rules for the model rather than for its users
 
 ---
 

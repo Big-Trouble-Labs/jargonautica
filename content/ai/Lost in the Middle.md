@@ -24,6 +24,8 @@ Documented as a U-shaped performance curve on retrieval tasks as the position of
 - [[Retrieval Augmented Generation]]: where document ordering matters
 - [[Chunking]]: why fewer, better chunks beat many
 - [[Attention]]: the mechanism the effect is attributed to
+- [[Needle in a Haystack]]: the test that exposes it
+- [[Summarisation]]: a weakness when summarising long inputs
 
 ---
 

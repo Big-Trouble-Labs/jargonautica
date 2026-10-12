@@ -23,6 +23,7 @@ Perturbation families include paraphrase, typographical noise, formatting change
 - [[Benchmarks and Evals]]: variance under perturbation as a reported measure
 - [[Interpolation and Extrapolation]]: behaviour away from the training distribution
 - [[Red Teaming]]: adversarial rather than naturalistic variation
+- [[Shortcut Learning]]: one of the main failures it looks for
 
 ---
 

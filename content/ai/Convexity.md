@@ -24,6 +24,7 @@ A convex function has a unique global minimum, and gradient descent converges to
 - [[Neural Network]]: the non-convex case
 - [[Loss Function]]: the shape of the landscape being described
 - [[Determinism and Seed]]: why runs differ when the surface is not convex
+- [[Loss Landscape]]: what non-convex terrain looks like
 
 ---
 

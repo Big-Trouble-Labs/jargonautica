@@ -23,6 +23,7 @@ An encoder-decoder with skip connections at each resolution, preserving fine spa
 - [[Convolutional Neural Network]]: the architecture family
 - [[Computer Vision]]: segmentation, its original purpose
 - [[Residual Connection]]: the skips that preserve detail
+- [[Image Segmentation]]: the task it was designed for
 
 ---
 

@@ -23,6 +23,7 @@ Chat imposes high articulation cost, since the user must express intent in prose
 - [[Prompt]]: the articulation cost it imposes
 - [[Expectation Setting]]: chat gives no affordances
 - [[Structured Output]]: the structured alternative
+- [[Human-computer Interaction]]: the discipline that studies it
 
 ---
 

@@ -27,6 +27,8 @@ Classical pipelines chained tokenisation, part-of-speech tagging, parsing and na
 - [[Recurrent Neural Network]]: the previous generation of sequence models
 - [[Symbolic AI and Expert Systems]]: where the field started
 - [[Turing Test]]: the question the field began with
+- [[Sentiment Analysis]]: a classic text classification task
+- [[Named Entity Recognition]]: a core extraction task
 
 ---
 

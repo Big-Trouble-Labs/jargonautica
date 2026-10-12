@@ -25,6 +25,7 @@ Successes cluster where structure is well defined and verification is possible: 
 - [[Simulation]]: learned models replacing simulation
 - [[Graph Neural Network]]: molecules and materials as graphs
 - [[Foundation Model]]: the pattern applied to scientific data
+- [[Protein Structure Prediction]]: its best-known example
 
 ---
 

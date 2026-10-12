@@ -26,6 +26,7 @@ Common routes include target leakage through features unavailable at inference, 
 - [[Feature Engineering]]: where target leakage usually enters
 - [[Benchmarks and Evals]]: benchmark contamination is the same problem
 - [[Cross-validation]]: preprocessing inside folds prevents one form of it
+- [[Geospatial AI]]: spatial splits as a classic trap
 
 ---
 

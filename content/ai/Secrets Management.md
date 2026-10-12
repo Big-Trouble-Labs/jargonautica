@@ -24,6 +24,8 @@ Use a dedicated secret store with short-lived, narrowly scoped credentials issue
 - [[Audit Logging]]: redaction before storage
 - [[Sandboxing]]: keeping credentials outside the sandbox
 - [[Tool Use and Function Calling]]: injecting credentials at the tool boundary
+- [[Authentication and Authorisation]]: what the credentials are for
+- [[System Prompt Extraction]]: why secrets never belong in prompts
 
 ---
 

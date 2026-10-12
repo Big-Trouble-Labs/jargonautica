@@ -27,6 +27,8 @@ The developer supplies structured descriptions of available functions and their 
 - [[Knowledge Cutoff]]: one of the weaknesses tools fix
 - [[Retrieval Augmented Generation]]: search as a tool
 - [[Prompt Injection]]: the risk that comes with acting on outside content
+- [[Application Programming Interface]]: what the tools usually are
+- [[Approval Gates]]: pausing consequential calls for sign-off
 
 ---
 

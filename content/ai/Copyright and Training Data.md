@@ -26,6 +26,7 @@ Three issues are frequently conflated: the legality of ingestion, the legality o
 - [[Common Crawl and Web Scraping]]: how the material was collected
 - [[Data Curation and Deduplication]]: what reduces verbatim reproduction
 - [[Provenance and Watermarking]]: the output side of the same problem
+- [[AI Crawlers and robots.txt]]: the opt-out mechanism in practice
 
 ---
 

@@ -26,6 +26,7 @@ Combines layout analysis, optical character recognition, table structure recogni
 - [[Vision Language Model]]: what now does much of it
 - [[Retrieval Augmented Generation]]: where extracted text goes
 - [[Model Confidence and Calibration]]: per-field confidence for review
+- [[Named Entity Recognition]]: pulling names and values from documents
 
 ---
 

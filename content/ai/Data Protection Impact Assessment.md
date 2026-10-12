@@ -26,6 +26,7 @@ Required where processing is likely to result in high risk, which explicitly inc
 - [[Data Minimisation]]: necessity and proportionality
 - [[Automated Decision-making Rights]]: safeguards to be documented
 - [[Retention Policy]]: one of the areas assessed
+- [[General Data Protection Regulation]]: where the requirement comes from
 
 ---
 

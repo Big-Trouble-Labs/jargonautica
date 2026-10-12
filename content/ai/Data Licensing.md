@@ -24,6 +24,7 @@ Three layers need checking separately: the licence on training data, the licence
 - [[Training Corpus]]: what is being licensed
 - [[Acceptable Use Policy]]: the terms attached to outputs
 - [[Synthetic Data]]: the route taken when licensing is too expensive
+- [[AI Crawlers and robots.txt]]: the opt-out that licensing deals sit beside
 
 ---
 

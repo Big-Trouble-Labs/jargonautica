@@ -26,6 +26,7 @@ A probabilistic ranking function using term frequency saturation and inverse doc
 - [[Semantic Search]]: the complementary approach
 - [[Retrieval Metrics]]: how ranking quality is measured
 - [[Vector Database]]: the dense counterpart infrastructure
+- [[Inverted Index]]: the data structure it runs on
 
 ---
 

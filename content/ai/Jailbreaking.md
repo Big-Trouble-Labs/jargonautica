@@ -24,6 +24,8 @@ Techniques include role-play framing, encoding requests to evade input filters, 
 - [[Prompt Injection]]: the related attack using outside content
 - [[Alignment]]: the training this tries to override
 - [[System Prompt]]: the instructions being overridden
+- [[Safety Classifier]]: a defence that sits outside the main model
+- [[Bug Bounty]]: how universal jailbreaks are sought and rewarded
 
 ---
 

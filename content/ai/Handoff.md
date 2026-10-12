@@ -24,6 +24,7 @@ Requires an explicit contract specifying what is transferred: task statement, re
 - [[Orchestrator]]: what manages the transfer
 - [[Context Engineering]]: deciding what to carry across
 - [[Trajectory]]: the record that makes failures attributable
+- [[Agent-to-agent Protocol]]: a protocol for handoffs across organisations
 
 ---
 

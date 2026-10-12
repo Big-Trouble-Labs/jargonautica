@@ -26,6 +26,7 @@ Points to establish are the processing region and whether it can be pinned, rete
 - [[Acceptable Use Policy]]: the contractual layer
 - [[Inference]]: the point at which data leaves your control
 - [[Federated Learning]]: the architectural answer where it cannot
+- [[Confidential Computing]]: a hardware route to confidentiality in use
 
 ---
 

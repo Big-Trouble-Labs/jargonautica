@@ -27,6 +27,7 @@ Defines capability tiers with associated evaluation triggers and required securi
 - [[Alignment]]: the safeguards it commits to
 - [[AI Assurance and Auditing]]: the external verification question
 - [[Compute Governance]]: the regulatory analogue
+- [[AI Safety Summits]]: where developers committed to publishing such frameworks
 
 ---
 

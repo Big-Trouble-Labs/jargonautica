@@ -24,6 +24,7 @@ Routing signals include a lightweight classifier over the request, task type, re
 - [[Fallback and Failover]]: routing for availability
 - [[Early Exit]]: the within-model version
 - [[Model Confidence and Calibration]]: escalation depends on it
+- [[AI Gateway]]: the infrastructure layer where routing often lives
 
 ---
 

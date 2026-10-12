@@ -26,6 +26,7 @@ Uses a programmatic verifier as the reward, eliminating reward model exploitatio
 - [[Reward Model]]: what a verifier replaces
 - [[Agentic Coding]]: tests as the verifier
 - [[Reinforcement Learning]]: the underlying method
+- [[Group Relative Policy Optimisation]]: a common algorithm for applying it
 
 ---
 

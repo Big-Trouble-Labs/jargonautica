@@ -28,6 +28,7 @@ Build it up from token counts per stage, including the system prompt and retriev
 - [[Agent]]: the design that multiplies it fastest
 - [[Tokens]]: the unit everything is billed in
 - [[Rate Limits and Quotas]]: the other constraint on volume
+- [[Thinking Budget]]: a direct control on reasoning cost
 
 ---
 

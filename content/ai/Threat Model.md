@@ -24,6 +24,7 @@ Structured approaches such as STRIDE enumerate categories of threat against a de
 - [[Prompt Injection]]: the central AI-specific threat
 - [[Least Privilege]]: the control it justifies
 - [[Data Protection Impact Assessment]]: the privacy counterpart
+- [[Zero Trust]]: a default assumption that attackers are already inside
 
 ---
 

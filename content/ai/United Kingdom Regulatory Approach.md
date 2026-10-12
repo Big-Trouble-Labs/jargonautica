@@ -25,6 +25,7 @@ The framework rests on principles covering safety and robustness, transparency a
 - [[Sector Regulation]]: how the principles are applied
 - [[AI Assurance and Auditing]]: the assurance ecosystem it relies on
 - [[Risk Tiers and High-risk Systems]]: the risk framing it shares
+- [[Regulatory Sandbox]]: a tool United Kingdom regulators pioneered
 
 ---
 

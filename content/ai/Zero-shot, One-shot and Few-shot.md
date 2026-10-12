@@ -29,6 +29,7 @@ This is in-context learning: the model adapts its behaviour from examples in the
 - [[Fine-tuning]]: the heavier alternative when examples are not enough
 - [[Chain of Thought]]: often combined with worked examples
 - [[Context Window]]: examples consume space in it
+- [[Induction Head]]: a mechanism behind in-context learning
 
 ---
 

@@ -23,6 +23,7 @@ Approaches sample frames and process them with a vision language model, with the
 - [[Multimodal Retrieval]]: finding moments in footage
 - [[Context Window]]: why sampling strategy matters
 - [[Text to Video]]: the generative counterpart
+- [[Object Detection]]: detecting objects frame by frame
 
 ---
 

@@ -27,6 +27,8 @@ Obligations fall on both providers and deployers, with separate rules for genera
 - [[Model Card]]: the documentation it effectively requires
 - [[AI Assurance and Auditing]]: how compliance gets demonstrated
 - [[Copyright and Training Data]]: its training data transparency provisions
+- [[General-purpose AI Model]]: the model category with its own obligations
+- [[AI Literacy]]: an obligation on every provider and deployer
 
 ---
 

@@ -23,6 +23,7 @@ Schemas define structure and constraints, enforced at write time in a database o
 - [[Data Pipeline]]: where schemas are enforced
 - [[Structured Output]]: the same idea applied to model responses
 - [[Data Lineage]]: metadata as the basis for tracing
+- [[Ontology]]: the richer, logic-based version
 
 ---
 

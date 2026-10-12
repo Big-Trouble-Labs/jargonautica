@@ -25,6 +25,7 @@ Reparameterises the reinforcement learning objective so the optimal policy can b
 - [[Reward Model]]: what it makes unnecessary
 - [[Reinforcement Learning from Human Feedback]]: the goal it serves
 - [[Fine-tuning]]: it is implemented as a fine-tuning loss
+- [[Preference Data]]: the data it learns from
 
 ---
 

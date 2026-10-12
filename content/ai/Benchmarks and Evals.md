@@ -28,6 +28,9 @@ Public benchmarks suffer badly from contamination, since anything on the open in
 - [[Machine Learning Operations]]: evaluation as a production discipline
 - [[Red Teaming]]: adversarial testing rather than scored testing
 - [[Reasoning Models and Test-Time Compute]]: where benchmark gains are currently concentrated
+- [[Benchmark Saturation]]: when a test stops discriminating
+- [[BLEU and ROUGE]]: classic reference-based text metrics
+- [[Capability Elicitation]]: how hard testers tried matters to a score
 
 ---
 

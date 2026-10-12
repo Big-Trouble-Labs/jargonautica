@@ -26,6 +26,8 @@ Entities and relations stored as triples and queried with languages such as SPAR
 - [[Symbolic AI and Expert Systems]]: the tradition this comes from
 - [[Semantic Search]]: the complementary retrieval method
 - [[Interpretability]]: explicit structure you can actually inspect
+- [[Ontology]]: the schema that defines its types and relations
+- [[Named Entity Recognition]]: how entities are pulled from text to populate one
 
 ---
 

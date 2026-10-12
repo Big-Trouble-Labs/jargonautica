@@ -24,6 +24,7 @@ Also called in-flight batching. The scheduler admits and evicts sequences at eac
 - [[Caching]]: paged key-value cache management
 - [[Latency, Throughput and Time to First Token]]: the trade it makes
 - [[Grouped Query Attention]]: smaller caches allow bigger batches
+- [[Paged Attention]]: the memory manager it pairs with
 
 ---
 

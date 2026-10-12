@@ -26,6 +26,8 @@ Task-level exposure analyses consistently find that a substantial share of tasks
 - [[Generative AI]]: the technology in question
 - [[Artificial General Intelligence]]: where the strongest claims come from
 - [[Automation Bias]]: what over-trust does to the augmentation case
+- [[Gradual Disempowerment]]: the long-run argument built on labour substitution
+- [[Productivity Paradox]]: why aggregate effects are slow to show
 
 ---
 

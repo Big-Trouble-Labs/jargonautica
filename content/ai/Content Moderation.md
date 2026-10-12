@@ -24,6 +24,7 @@ Implemented as classifiers over input and output covering defined harm categorie
 - [[Accuracy, Precision and Recall]]: the false positive trade-off
 - [[Streaming]]: output filtering complicates it
 - [[Language Coverage]]: classifiers degrade outside English
+- [[Safety Classifier]]: the model that automates the screening
 
 ---
 

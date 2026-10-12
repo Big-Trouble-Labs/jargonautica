@@ -27,6 +27,7 @@ Fixed-size chunking with overlap is the baseline; structure-aware chunking that 
 - [[Embeddings]]: each chunk becomes one
 - [[Context Window]]: chunk size and count are budgeted against it
 - [[Lost in the Middle]]: why fewer, better chunks win
+- [[Summarisation]]: how long documents are summarised in stages
 
 ---
 

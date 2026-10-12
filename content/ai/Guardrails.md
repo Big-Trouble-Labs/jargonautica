@@ -26,6 +26,7 @@ Typically implemented as classifiers, rule sets or smaller models applied to inp
 - [[Prompt Injection]]: the other attack class they screen for
 - [[Red Teaming]]: how they get tested
 - [[Machine Learning Operations]]: running and updating them in production
+- [[Safety Classifier]]: the model-based checks many rely on
 
 ---
 

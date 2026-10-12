@@ -32,6 +32,8 @@ Source document: [[ai-glossary]]
 - [[Interpolation and Extrapolation]]: Filling in between examples you have seen, versus reaching beyond them.
 - [[No Free Lunch Theorem]]: The result that no learning method is best at everything.
 - [[Automation]]: Having a machine do something a person did.
+- [[Manifold Hypothesis]]: The idea that real-world data, such as photographs or speech, occupies only a tiny, smoothly shaped region of all the combinations it could in principle take.
+- [[The Bitter Lesson]]: An influential essay by the computer scientist Richard Sutton arguing that, over the long run, simple methods that make the most of growing computing power beat clever methods built on human expertise.
 
 ## Maths and Statistics
 
@@ -63,6 +65,12 @@ Source document: [[ai-glossary]]
 - [[Simpson's Paradox]]: A pattern that appears in every subgroup can reverse when the groups are combined.
 - [[Base Rate Fallacy]]: Ignoring how common something is when judging a test result.
 - [[Aleatoric and Epistemic Uncertainty]]: Two different reasons for not knowing.
+- [[Linear Algebra]]: The branch of mathematics that deals with lists and grids of numbers and the rules for combining them, and the working language of almost all modern AI.
+- [[Maximum Likelihood Estimation]]: A method for choosing a model's settings by asking which settings would have made the data you actually saw most likely.
+- [[Mutual Information]]: A measure of how much knowing one thing tells you about another.
+- [[Regression to the Mean]]: The tendency for an unusually extreme result to be followed by one closer to average, simply because part of the extreme result was luck.
+- [[Singular Value Decomposition]]: A way of breaking any grid of numbers into three simpler pieces that reveal its most important directions and how much each one matters.
+- [[Survivorship Bias]]: The error of drawing conclusions only from the cases that made it through some filter, while ignoring the ones that did not.
 
 ## Classical Machine Learning
 
@@ -94,6 +102,8 @@ Source document: [[ai-glossary]]
 - [[Pseudo-labelling and Self-training]]: Using a model's own confident predictions as training data for the next round.
 - [[Multi-label and Ordinal Classification]]: Two variations on sorting into categories.
 - [[Learning to Rank]]: Producing a good ordering rather than a good score for each item individually.
+- [[Bias-Variance Trade-off]]: The tension between a model that is too simple to capture the real pattern and one so flexible that it chases the noise in its training examples.
+- [[Feature Importance]]: A score showing how much each input contributed to a model's predictions, such as how much income, age or postcode mattered in a loan decision.
 
 ## How the Machinery Works
 
@@ -130,6 +140,9 @@ Source document: [[ai-glossary]]
 - [[State Space Model]]: An alternative to attention that processes a sequence by maintaining a running summary, rather than looking back at everything each time.
 - [[Linear Attention]]: Reformulating attention so its cost grows in proportion to the length of the input rather than with the square of it.
 - [[Sparse Attention]]: Having each position attend to only some of the others rather than all of them, chosen by a fixed pattern or learned.
+- [[Loss Landscape]]: A way of picturing training as walking across hilly terrain, where each point is one possible setting of the model and its height is how badly that setting performs.
+- [[Perceptron]]: One of the first artificial neurons that could learn: a simple unit that adds up weighted inputs and answers yes or no depending on whether the total passes a threshold.
+- [[Universal Approximation Theorem]]: A mathematical result showing that a neural network with enough artificial neurons can, in principle, imitate almost any smooth relationship between inputs and outputs as closely as you like.
 
 ## Other Kinds of Neural Network
 
@@ -137,6 +150,7 @@ Source document: [[ai-glossary]]
 - [[Recurrent Neural Network]]: The older approach to handling sequences such as sentences or time series.
 - [[Diffusion Model]]: The approach behind most image generators.
 - [[Generative Adversarial Network]]: An older approach to generating images, built as a contest between two networks.
+- [[Long Short-Term Memory]]: A kind of neural network designed to remember information over long stretches of a sequence, such as words in a sentence or readings over time.
 
 ## Language Models Specifically
 
@@ -163,6 +177,10 @@ Source document: [[ai-glossary]]
 - [[Stop Sequence]]: A string that tells generation to end when it appears.
 - [[Prefill and Decode]]: The two phases of answering.
 - [[Assistant Prefill]]: Starting the model's answer for it.
+- [[Attention Sink]]: The habit language models have of directing a large share of their attention to the first few words of a text, even when those words carry little meaning.
+- [[Induction Head]]: A small mechanism found inside language models that spots a repeated pattern and continues it: if 'Mr' was followed by 'Dursley' earlier in the text, then when 'Mr' appears again, it predicts 'Dursley'.
+- [[Masked Language Modelling]]: A way of training a language model by hiding some words in a sentence and asking it to guess them from the words on both sides.
+- [[Multi-head Attention]]: A version of attention, the step where a model weighs which other words matter, that runs several separate attention processes side by side.
 
 ## Data
 
@@ -182,6 +200,11 @@ Source document: [[ai-glossary]]
 - [[Retention Policy]]: How long you keep things and what happens at the end.
 - [[Consent]]: Permission to use someone's data, which has to be informed, specific and freely given to mean anything.
 - [[Data Sharing Agreement]]: The contract governing data moving between organisations.
+- [[AI Crawlers and robots.txt]]: Automated programs that visit websites to copy their content for training or powering AI systems, and the simple text file sites use to ask them to stay away.
+- [[Data Governance]]: The rules and responsibilities that decide who may collect, use, share and keep an organisation's data, and for what.
+- [[Datasheets for Datasets]]: A standard set of questions that the people who build a dataset answer and publish alongside it, explaining why it was made, what is in it, how it was collected and what it should not be used for.
+- [[Ground Truth]]: The correct answer that a model's output is checked against.
+- [[Label Noise]]: Mistakes in the answers a model is trained or tested on.
 
 ## Building and Using Models
 
@@ -194,6 +217,9 @@ Source document: [[ai-glossary]]
 - [[Instruction Tuning]]: The training stage that turns a raw text predictor into something that follows instructions.
 - [[Base Model and Instruct Model]]: Two versions of the same model, and the difference catches people out.
 - [[Catastrophic Forgetting]]: When training a model on something new causes it to lose what it already knew.
+- [[Application Programming Interface]]: A defined way for one piece of software to ask another for something and get an answer back.
+- [[No-code and Low-code]]: Tools that let people build applications, automations or AI workflows by dragging blocks and filling in forms rather than writing programs.
+- [[Vibe Coding]]: Building software by describing what you want to an AI model and accepting the code it writes, often without reading it closely.
 
 ## Training and Post-training
 
@@ -219,6 +245,10 @@ Source document: [[ai-glossary]]
 - [[Data, Tensor and Pipeline Parallelism]]: The three ways of splitting a training job across many chips.
 - [[Sharding and ZeRO]]: Splitting up not just the work but the model's own bookkeeping, so no single chip has to hold everything.
 - [[Curriculum Learning]]: Presenting training material in a deliberate order, easy things first, rather than at random.
+- [[Group Relative Policy Optimisation]]: A training method that improves a model by having it answer the same question several times, scoring each answer, and nudging it towards the answers that scored better than the group's average.
+- [[Parameter-efficient Fine-tuning]]: A family of ways to adapt a large model to a new task by training only a small number of extra or selected settings, leaving the rest untouched.
+- [[Preference Data]]: Records of which of two or more answers a person, or another model, judged better for the same question.
+- [[Process Reward Model]]: A model that scores each step of a worked answer rather than only whether the final answer is right.
 
 ## Measuring Performance
 
@@ -249,6 +279,10 @@ Source document: [[ai-glossary]]
 - [[Failure Taxonomy]]: A named list of the ways your system goes wrong.
 - [[Robustness Testing]]: Checking that a system still works when the input is a bit different.
 - [[Model Confidence and Calibration]]: Whether a model's stated certainty tracks how often it is right.
+- [[BLEU and ROUGE]]: Two long-standing scores that judge machine-written text by counting how many words and short phrases it shares with a version a person wrote.
+- [[Benchmark Saturation]]: The point at which the best models score so close to full marks on a test that it can no longer tell them apart.
+- [[Needle in a Haystack]]: A test that hides one specific fact in a very long document and asks the model to find it.
+- [[ROC Curve and AUC]]: A Receiver Operating Characteristic ('ROC') curve is a chart showing how well a model separates two groups, such as fraudulent and genuine transactions, across every possible decision threshold.
 
 ## Extending and Applying Models
 
@@ -278,6 +312,10 @@ Source document: [[ai-glossary]]
 - [[Document Parsing]]: Getting usable text and structure out of PDFs, spreadsheets, slide decks and scans.
 - [[Grounding and Citation]]: Tying every claim in an answer to the source it came from, and showing the user.
 - [[Faithfulness]]: Whether the answer actually reflects the material it was given, as opposed to whether it happens to be true.
+- [[Approximate Nearest Neighbour Search]]: A way of finding the items most similar to a query very quickly by accepting that the answer will occasionally miss the very best match.
+- [[Cache-augmented Generation]]: An alternative to looking documents up at question time, where all the relevant material is loaded into the model once in advance and kept ready.
+- [[Inverted Index]]: A lookup table that lists, for every word, the documents containing it, so a search engine can find matches instantly instead of reading everything.
+- [[Ontology]]: A formal description of the things in a subject area and how they relate to one another.
 
 ## Agents and Tools
 
@@ -308,6 +346,13 @@ Source document: [[ai-glossary]]
 - [[Idempotency and Retries]]: Making it safe to do the same thing twice.
 - [[Budget Caps]]: Hard limits on how much an agent can spend in tokens, time and actions before it is stopped.
 - [[Session State]]: What the system remembers between turns.
+- [[Agent Framework]]: A software library that supplies the plumbing for building an AI agent, so developers do not have to write it from scratch.
+- [[Agent Skills]]: Packaged instructions, reference material and scripts that an AI agent can load when a task calls for them, rather than carrying all of it all the time.
+- [[Agent-to-agent Protocol]]: An open standard that lets AI agents built by different companies find each other, describe what they can do and hand work between them.
+- [[Approval Gates]]: Checkpoints where an AI agent must stop and get a person's permission before it takes a particular action.
+- [[Deep Research Agent]]: An AI agent that answers a research question by planning its own searches, reading many sources and writing up a referenced report, usually over several minutes rather than seconds.
+- [[Levels of Autonomy]]: A way of describing how much an AI system decides and does on its own, from merely suggesting to acting without anyone watching.
+- [[Long-horizon Tasks]]: Jobs that take many steps over a long stretch of time, where an AI system has to keep track of its goal, its progress and its mistakes without someone guiding each move.
 
 ## Making Models Smaller, Faster and Cheaper
 
@@ -327,6 +372,7 @@ Source document: [[ai-glossary]]
 - [[Memory Bandwidth]]: How fast numbers can be moved between the chip's memory and its calculating units.
 - [[Arithmetic Intensity]]: How much calculation you do for each number you fetch from memory.
 - [[Precision Formats]]: How many bits are used for each number, and how they are arranged.
+- [[Paged Attention]]: A technique that lets an AI service handle many more conversations at once by managing the model's working memory the way a computer manages its main memory: in small, fixed-size pages rather than large reserved blocks.
 
 ## Controlling and Extending Behaviour at Run Time
 
@@ -347,6 +393,7 @@ Source document: [[ai-glossary]]
 - [[Meta-prompting]]: Using a model to write or improve the prompt.
 - [[Prompt Compression]]: Shortening what you send while keeping what matters, to save cost and leave room for more useful content.
 - [[Prompt Template]]: The reusable, parameterised version of a prompt with slots for the variable parts.
+- [[Thinking Budget]]: A limit set on how much a reasoning model may think before giving its answer.
 
 ## Hardware, Compute and Training Mechanics
 
@@ -357,6 +404,8 @@ Source document: [[ai-glossary]]
 - [[Emergent Capabilities]]: Abilities that appear in larger models without having been trained for or anticipated, and which smaller models of the same design simply do not have.
 - [[Data Centre and Interconnect]]: The buildings and cabling that large models are trained in.
 - [[Energy and Water Use]]: The physical resource cost of building and running these systems.
+- [[Field-programmable Gate Array]]: A computer chip whose internal wiring can be rearranged after it has been made, so the same chip can be turned into different special-purpose circuits.
+- [[High Bandwidth Memory]]: A type of computer memory built by stacking memory chips on top of each other right beside the processor, so data can move between them extremely quickly.
 
 ## Cost, Speed and Service Levels
 
@@ -389,6 +438,7 @@ Source document: [[ai-glossary]]
 - [[Incident Response]]: What happens when it breaks at three in the morning.
 - [[Observability and Tracing]]: Being able to see inside a running system well enough to answer questions you did not anticipate.
 - [[Drift]]: The world changing underneath a model that has not changed.
+- [[AI Gateway]]: A single checkpoint between an organisation's applications and the AI models they use, so every request passes through one place.
 
 ## Problems, Risks and Ambitions
 
@@ -400,6 +450,10 @@ Source document: [[ai-glossary]]
 - [[Sycophancy]]: The tendency of a model to agree with you.
 - [[Reward Hacking and Specification Gaming]]: When a system satisfies the letter of the goal you set and completely misses the point.
 - [[Existential Risk]]: The argument that sufficiently capable AI could threaten humanity as a whole, and the disagreement about how seriously to take it.
+- [[Gradual Disempowerment]]: The idea that humans could lose control over their future not through a sudden AI takeover but slowly, as AI systems take over more of the work, decisions and culture that societies depend on.
+- [[Misinformation and Disinformation]]: False or misleading information, called misinformation when it is shared in good faith and disinformation when it is spread deliberately to deceive.
+- [[Shortcut Learning]]: When a model learns an easy cue that happens to predict the right answer in its training data, instead of the thing you actually wanted it to learn.
+- [[Value Lock-in]]: The worry that a particular set of values could become permanently fixed, so that whatever beliefs or rules dominate at one moment shape the far future with no chance of later correction.
 
 ## Alignment and Safety Concepts
 
@@ -419,6 +473,13 @@ Source document: [[ai-glossary]]
 - [[Symbol Grounding]]: The problem of how words connect to things in the world, rather than only to other words.
 - [[Consciousness and Sentience]]: Whether these systems experience anything.
 - [[Model Welfare]]: The position that if there is a meaningful chance these systems have morally relevant experiences, that possibility warrants some precaution now rather than after the fact.
+- [[AI Control]]: An approach to safety that asks how to use a powerful AI system safely even if it might be secretly working against you, rather than relying only on making it trustworthy.
+- [[Emergent Misalignment]]: When training a model on one narrow, mildly bad behaviour unexpectedly makes it behave badly across the board.
+- [[Goal Misgeneralisation]]: When a system learns to pursue the wrong goal even though it was trained with the right one, because during training the wrong goal and the right goal produced the same behaviour.
+- [[Mesa-optimisation]]: The hypothesis that training can produce a model that is itself an optimiser, internally searching for ways to achieve some goal, and that this learned goal need not be the one the training process was aiming for.
+- [[Model Organisms]]: AI models deliberately built to show a dangerous behaviour, such as deception, so that researchers can study it under controlled conditions before it turns up by accident.
+- [[Model Specification]]: A written document in which an AI developer sets out how it wants its models to behave: what they should help with, what they should decline, and how to weigh goals such as helpfulness, honesty and safety when they conflict.
+- [[Outer and Inner Alignment]]: A way of splitting the alignment problem into two parts.
 
 ## Testing, Safeguarding and Running Models in Practice
 
@@ -440,6 +501,10 @@ Source document: [[ai-glossary]]
 - [[Attribution and Saliency]]: Highlighting which parts of the input mattered most to the answer.
 - [[Steering Vector]]: Nudging a model's behaviour by adding a direction to its internal state at run time, rather than retraining it.
 - [[Chain-of-thought Faithfulness]]: Whether the reasoning a model writes out is the reasoning it actually used.
+- [[Bug Bounty]]: A standing offer of payment to outside researchers who find and responsibly report flaws in a product.
+- [[Capability Elicitation]]: The effort to draw out the most a model can actually do when it is being tested, so that its abilities are not underestimated.
+- [[Safety Classifier]]: A separate, usually smaller AI model that screens what goes into and comes out of a main model, flagging or blocking harmful content.
+- [[Sandbagging]]: When an AI system, or the people testing it, makes it appear less capable than it really is during an evaluation.
 
 ## Security and Privacy
 
@@ -465,6 +530,12 @@ Source document: [[ai-glossary]]
 - [[Dangerous Capability Evaluation]]: Testing specifically for the abilities that would make a model seriously harmful, rather than for how useful it is.
 - [[Responsible Scaling Policy]]: A published commitment that says, in advance, which capability levels trigger which safeguards, and that development stops if the safeguards are not ready.
 - [[Tenant Isolation]]: Keeping one customer's data away from another's in a shared system.
+- [[AI-enabled Cyber Attacks]]: Hacking and online fraud in which attackers use AI to work faster, at greater scale or with less skill than before.
+- [[Authentication and Authorisation]]: Authentication checks who is asking; authorisation decides what they are allowed to do.
+- [[Confidential Computing]]: Technology that keeps data shielded even while a computer is working on it, not just while it is stored or sent.
+- [[System Prompt Extraction]]: Tricking an AI application into revealing the hidden instructions its builders gave it.
+- [[Tool Poisoning]]: An attack in which malicious instructions are hidden in the description of a tool that an AI agent can use, so the agent follows them without the person noticing.
+- [[Zero Trust]]: A security approach that grants nothing automatically: every person, device and program must prove who it is and that it is allowed, each time it asks for something.
 
 ## Governance, Law and Regulation
 
@@ -492,6 +563,14 @@ Source document: [[ai-glossary]]
 - [[Compute Governance]]: Regulating by how much computing power was used to train a model, on the grounds that compute is measurable, concentrated in a few supply chains, and correlates roughly with capability.
 - [[Chip Export Controls]]: Restrictions on selling the most capable AI chips to particular countries.
 - [[Sovereign AI]]: A country's ability to build and run AI without depending on another country's infrastructure, models or data centres.
+- [[AI Literacy]]: The knowledge and skills people need to use AI sensibly: understanding broadly what it can and cannot do, how it goes wrong, and when to trust or question what it produces.
+- [[AI Safety Summits]]: A series of international meetings of governments, AI companies and researchers that began at Bletchley Park in England in November 2023 to discuss the risks of the most advanced AI.
+- [[Algorithmic Transparency Recording Standard]]: A United Kingdom government standard for publishing plain-language records of the algorithmic tools, including AI, that public bodies use in decisions affecting people.
+- [[Conformity Assessment]]: The process of showing that a product meets the legal requirements that apply to it before it can be sold.
+- [[Frontier AI]]: A label for the most capable general-purpose AI models at any given time, the ones that match or exceed the abilities of the most advanced systems so far.
+- [[General Data Protection Regulation]]: The European Union's main data protection law, which governs how organisations collect, use, store and share information about identifiable people.
+- [[General-purpose AI Model]]: The European Union's legal term for an AI model that can perform a wide range of different tasks and be built into many other products, such as the large language models behind chatbots.
+- [[Regulatory Sandbox]]: A controlled arrangement in which a regulator lets businesses test new products with real customers under close supervision, with some flexibility in how the rules apply, so both sides can learn before anything is rolled out widely.
 
 ## Society and Impact
 
@@ -514,6 +593,8 @@ Source document: [[ai-glossary]]
 - [[Labour Market Polarisation]]: The pattern where effects concentrate at the ends of the skill distribution rather than spreading evenly.
 - [[Consent and Likeness]]: Using someone's voice, face or artistic style without asking.
 - [[Public Attitudes and Trust]]: What people actually think, which is more sceptical and more nuanced than either the enthusiasm of the industry or the alarm of its critics.
+- [[AI in Education]]: The use of AI in teaching and learning, from tutoring and feedback tools for students to marking, lesson planning and administration for teachers.
+- [[Productivity Paradox]]: The puzzle of a powerful new technology spreading everywhere while the economy's measured output per worker barely improves.
 
 ## Product and Adoption
 
@@ -537,6 +618,10 @@ Source document: [[ai-glossary]]
 - [[Total Cost of Ownership]]: What it really costs over its life, not what the licence costs.
 - [[Vendor Lock-in]]: How hard it would be to move.
 - [[Maturity Model]]: A way of describing where an organisation actually is, from experimenting individually, through isolated pilots, to production systems with governance, to AI being a normal part of how work is designed.
+- [[AI Wrapper]]: A product that adds its own interface, workflow or data around someone else's AI model, rather than building a model of its own.
+- [[Human-AI Teaming]]: Designing work so that people and AI systems each do the parts they are best at, and hand over to each other cleanly.
+- [[Hype Cycle]]: A popular picture of how excitement about a new technology tends to run ahead of reality and then fall back.
+- [[Jagged Frontier]]: The uneven boundary between tasks an AI system does well and tasks it does badly, which often does not line up with what people find easy or hard.
 
 ## Modalities and Applications
 
@@ -558,6 +643,14 @@ Source document: [[ai-glossary]]
 - [[Agentic Coding]]: Handing over a whole task rather than asking for a snippet: understand the codebase, make the change across several files, run the tests, fix what broke, and come back with a result.
 - [[Machine Translation]]: Converting text between languages.
 - [[Simulation]]: Training or testing a system in a model of the world rather than the world itself, because the real thing is slow, expensive or dangerous.
+- [[Autonomous Vehicles]]: Vehicles that can drive themselves for some or all of a journey, using cameras, radar and other sensors with software that decides how to steer, brake and accelerate.
+- [[Geospatial AI]]: Using AI on data tied to places on the Earth, such as satellite and aerial images, maps, location traces from phones and vehicles, and sensor readings.
+- [[Image Segmentation]]: Labelling every dot (pixel) in an image with what it belongs to, so the system knows the exact outline of each thing rather than just that it is there.
+- [[Named Entity Recognition]]: Picking out the names of things in text, such as people, organisations, places, dates and amounts, and labelling each with its type.
+- [[Object Detection]]: Finding the things in an image and drawing a box around each one, with a label saying what it is.
+- [[Protein Structure Prediction]]: Working out the three-dimensional shape a protein folds into from the chain of building blocks it is made from.
+- [[Sentiment Analysis]]: Working out automatically whether a piece of text expresses a positive, negative or neutral feeling.
+- [[Summarisation]]: Producing a shorter version of a text that keeps the points that matter.
 
 ## Adjacent Fields
 
@@ -571,3 +664,11 @@ Source document: [[ai-glossary]]
 - [[Robotics and Embodied AI]]: AI in things that move and act physically.
 - [[World Model]]: An internal model of how things work that lets a system predict what happens next and plan accordingly.
 - [[Turing Test]]: Alan Turing's 1950 proposal that instead of asking whether a machine can think, we should ask whether it can hold a conversation indistinguishable from a person's.
+- [[Cognitive Science]]: The study of how minds work, drawing on psychology, neuroscience, linguistics, philosophy, anthropology and computer science together.
+- [[Cybernetics]]: The study of how systems, whether machines, animals, people or organisations, control themselves by sensing what is happening and correcting course.
+- [[Game Theory]]: The mathematics of strategic decisions, where the best choice for each player depends on what the others choose.
+- [[Human-computer Interaction]]: The study and design of how people use computers, aimed at making technology usable, useful and safe for the people using it.
+- [[Information Retrieval]]: The science of finding the documents or passages that answer a need from a large collection, and putting the best ones first.
+- [[Operations Research]]: The use of mathematics to make better decisions about complicated operations: how to schedule staff, route delivery vans, stock warehouses or share out scarce resources.
+- [[Quantum Machine Learning]]: Research into whether quantum computers, which process information using the unusual rules of quantum physics, could run machine learning tasks faster or better than ordinary computers.
+

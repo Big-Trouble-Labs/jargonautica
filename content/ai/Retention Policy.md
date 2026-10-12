@@ -24,6 +24,7 @@ Requires defined periods per data category, tied to purpose and legal basis, wit
 - [[Audit Logging]]: logs are records with retention duties
 - [[Machine Unlearning]]: why deletion from a model is hard
 - [[Data Residency and Confidentiality]]: provider-side retention terms
+- [[Data Governance]]: the framework retention rules sit within
 
 ---
 

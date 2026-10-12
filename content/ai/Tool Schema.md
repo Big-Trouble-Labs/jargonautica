@@ -27,6 +27,7 @@ Typically JSON Schema with a natural language description per function and per p
 - [[Context Engineering]]: schemas consume context and degrade selection
 - [[Prompt Injection]]: third-party schemas as an injection route
 - [[Model Context Protocol]]: the standard that carries them
+- [[Tool Poisoning]]: an attack that hides instructions in definitions
 
 ---
 

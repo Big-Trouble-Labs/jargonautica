@@ -23,6 +23,9 @@ Detection uses network and endpoint monitoring, cloud access security brokers an
 - [[Data Residency and Confidentiality]]: the exposure it creates
 - [[Machine Learning Operations]]: the sanctioned alternative that displaces it
 - [[Guardrails]]: what approved tools have and unapproved ones do not
+- [[Data Governance]]: the controls that reduce it
+- [[No-code and Low-code]]: a common route for unsanctioned tools
+- [[AI Gateway]]: a sanctioned route that reduces it
 
 ---
 

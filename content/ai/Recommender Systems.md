@@ -27,6 +27,7 @@ Classical approaches are collaborative filtering, using patterns across users, a
 - [[Machine Learning]]: the field this is the largest deployment of
 - [[Bias]]: popularity and feedback loops as concrete mechanisms
 - [[Benchmarks and Evals]]: why offline measures mislead here
+- [[Quantum Machine Learning]]: where a claimed quantum speed-up was matched classically
 
 ---
 

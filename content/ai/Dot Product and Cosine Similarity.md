@@ -27,6 +27,7 @@ The dot product equals the product of magnitudes times the cosine of the angle b
 - [[Attention]]: attention scores are scaled dot products
 - [[Semantic Search]]: ranking by this measure
 - [[Vector Database]]: the operation an index accelerates
+- [[Linear Algebra]]: the mathematics these operations come from
 
 ---
 

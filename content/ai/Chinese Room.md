@@ -23,6 +23,7 @@ Directed at symbolic AI in 1980, and routinely applied to language models today.
 - [[Symbol Grounding]]: the connection to meaning
 - [[Turing Test]]: the behavioural criterion it attacks
 - [[Consciousness and Sentience]]: the wider question
+- [[Cognitive Science]]: the wider debate about minds and machines
 
 ---
 

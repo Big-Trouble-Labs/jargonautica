@@ -27,6 +27,7 @@ GPUs provide massive parallelism suited to the matrix multiplications that domin
 - [[Inference]]: the stage that consumes them continuously
 - [[Deep Learning]]: the approach these chips made practical
 - [[Quantisation]]: a direct response to their memory limits
+- [[High Bandwidth Memory]]: the memory that feeds it
 
 ---
 

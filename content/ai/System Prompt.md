@@ -24,6 +24,7 @@ Usually a distinct message role that models are trained to weight more heavily t
 - [[Caching]]: why static instructions go at the front
 - [[Guardrails]]: the checks that sit outside the model instead
 - [[Alignment]]: shaping behaviour at run time rather than in training
+- [[System Prompt Extraction]]: why its contents should be assumed public
 
 ---
 

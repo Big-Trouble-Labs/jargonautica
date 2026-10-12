@@ -25,6 +25,8 @@ Enables massively parallel data collection and safe exploration of failure cases
 - [[Reinforcement Learning]]: where simulated experience is used
 - [[Agent Evaluation]]: determinism and resettability
 - [[Synthetic Data]]: simulated data as training material
+- [[Autonomous Vehicles]]: how driving systems are validated
+- [[Operations Research]]: a core operations research tool
 
 ---
 

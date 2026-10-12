@@ -26,6 +26,8 @@ A predictive model exploits any association that generalises, including spurious
 - [[Bias]]: spurious correlations learned and applied
 - [[Controlled Experiment]]: randomisation as the practical answer
 - [[Data Leakage]]: the modelling version of a spurious relationship
+- [[Mutual Information]]: a measure that also catches non-linear dependence
+- [[Shortcut Learning]]: the model-training version of the confusion
 
 ---
 

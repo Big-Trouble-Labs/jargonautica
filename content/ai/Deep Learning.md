@@ -24,6 +24,7 @@ The underlying ideas date to the 1980s. What changed around 2012 was not theory 
 - [[Machine Learning]]: the wider field it sits in
 - [[Graphics Processing Unit]]: the hardware that made it practical
 - [[Scaling Laws]]: the pattern that has driven it since 2012
+- [[Protein Structure Prediction]]: a landmark scientific application
 
 ---
 

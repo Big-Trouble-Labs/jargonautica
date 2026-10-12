@@ -24,6 +24,7 @@ Decode is memory-bandwidth-bound: per token, the entire weight set plus the key-
 - [[Prefill and Decode]]: the phase this constrains
 - [[Graphics Processing Unit]]: the hardware property
 - [[Continuous Batching]]: how throughput is recovered
+- [[High Bandwidth Memory]]: the memory technology that supplies it
 
 ---
 

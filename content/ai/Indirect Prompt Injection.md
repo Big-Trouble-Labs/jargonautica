@@ -26,6 +26,7 @@ Payloads may be invisible to humans through white text, metadata, image steganog
 - [[Confused Deputy]]: the mechanism it exploits
 - [[Browser Automation]]: a major exposure route
 - [[Least Privilege]]: the only reliable containment
+- [[Tool Poisoning]]: a variant delivered through tool descriptions
 
 ---
 

@@ -25,6 +25,7 @@ Combines sparse lexical retrieval such as BM25 with dense vector retrieval, fuse
 - [[Reranking]]: the pass that follows
 - [[Retrieval Augmented Generation]]: the system it serves
 - [[Retrieval Metrics]]: how the combination is judged
+- [[Inverted Index]]: the keyword half of the combination
 
 ---
 

@@ -23,6 +23,7 @@ Techniques include soft deletion with a recovery window, drafts requiring explic
 - [[Idempotency and Retries]]: the technical counterpart
 - [[Least Privilege]]: confirmation proportionate to consequence
 - [[Agent]]: what makes autonomy tolerable
+- [[Approval Gates]]: where irreversible actions should pause
 
 ---
 

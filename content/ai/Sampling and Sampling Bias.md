@@ -27,6 +27,8 @@ Random, stratified and cluster sampling differ in how they trade variance agains
 - [[Data Quality]]: fitness for purpose starts here
 - [[Confidence Interval]]: how sample size limits what you can claim
 - [[Cross-validation]]: making better use of a small sample
+- [[Survivorship Bias]]: a common special case
+- [[Sentiment Analysis]]: why aggregate sentiment can mislead
 
 ---
 

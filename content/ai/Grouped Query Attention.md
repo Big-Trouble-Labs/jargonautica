@@ -26,6 +26,7 @@ Sits between multi-head attention, where every head has its own key and value pr
 - [[Caching]]: the key-value cache it shrinks
 - [[Memory Bandwidth]]: why cache size limits serving
 - [[Continuous Batching]]: smaller caches allow larger batches
+- [[Multi-head Attention]]: the baseline it shares keys and values from
 
 ---
 

@@ -24,6 +24,7 @@ The set of prior constraints that allow generalisation beyond training data. Con
 - [[Transformer]]: a much weaker bias, traded for data
 - [[No Free Lunch Theorem]]: the formal reason bias is necessary
 - [[Scaling Laws]]: weaker biases plus more data has been the trend
+- [[The Bitter Lesson]]: the argument that built-in assumptions lose to scale
 
 ---
 

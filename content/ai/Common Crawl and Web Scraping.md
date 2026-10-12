@@ -27,6 +27,7 @@ Raw crawl data is extremely noisy and needs aggressive filtering, so derived col
 - [[Data Licensing]]: the paid alternative now growing
 - [[Bias]]: coverage is skewed in ways that carry through
 - [[Data Poisoning]]: an open crawl is an open door
+- [[AI Crawlers and robots.txt]]: how sites ask crawlers to stay away
 
 ---
 

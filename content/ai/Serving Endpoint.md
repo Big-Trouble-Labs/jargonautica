@@ -24,6 +24,7 @@ Concerns include authentication and authorisation, request validation, timeout a
 - [[Rate Limits and Quotas]]: enforced at this boundary
 - [[Guardrails]]: the natural place for them
 - [[Service Level Objective]]: what it is measured against
+- [[Application Programming Interface]]: the interface clients call
 
 ---
 

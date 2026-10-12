@@ -27,6 +27,7 @@ Derived from continuous-time linear systems, discretised and made input-dependen
 - [[Recurrent Neural Network]]: the older recurrent idea it revives
 - [[Context Window]]: the long-sequence problem it addresses
 - [[Hidden Markov Model]]: the classical ancestor
+- [[Long Short-Term Memory]]: an earlier recurrent design
 
 ---
 

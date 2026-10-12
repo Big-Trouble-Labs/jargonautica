@@ -26,6 +26,7 @@ Covers transformation, scaling, encoding of categorical variables, binning, inte
 - [[Data Leakage]]: the hazard that lives in feature construction
 - [[Random Forest and Gradient Boosting]]: where good features still decide the outcome
 - [[Classification and Regression]]: what the features are being built for
+- [[Feature Importance]]: measuring which features earn their place
 
 ---
 

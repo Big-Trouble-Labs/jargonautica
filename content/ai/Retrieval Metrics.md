@@ -26,6 +26,7 @@ Recall at k is the primary measure for retrieval feeding generation, since gener
 - [[Retrieval Augmented Generation]]: the stage being measured
 - [[Learning to Rank]]: the measures it optimises
 - [[Golden Dataset]]: labelled relevance judgements
+- [[Information Retrieval]]: the discipline that defined them
 
 ---
 

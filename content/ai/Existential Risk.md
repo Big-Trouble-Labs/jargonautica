@@ -26,6 +26,8 @@ The technical core concerns instrumental convergence, the observation that many 
 - [[Emergent Capabilities]]: the evidence usually cited for unpredictability
 - [[Reward Hacking and Specification Gaming]]: the observed behaviour the argument extrapolates from
 - [[Interpretability]]: the research direction both camps support
+- [[Value Lock-in]]: a related long-term concern about permanence
+- [[Gradual Disempowerment]]: a slow, structural version of the concern
 
 ---
 

@@ -27,6 +27,8 @@ Repeated multiplication of Jacobians during backpropagation causes gradient magn
 - [[Recurrent Neural Network]]: where the problem was worst
 - [[Gradient Clipping]]: the blunt practical control
 - [[Activation Function]]: saturating activations made it worse
+- [[Long Short-Term Memory]]: an architecture designed to avoid them
+- [[Quantum Machine Learning]]: the quantum analogue, barren plateaus
 
 ---
 

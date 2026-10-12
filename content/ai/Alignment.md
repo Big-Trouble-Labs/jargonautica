@@ -25,6 +25,9 @@ The core difficulty is specification: any measurable proxy for what we want can 
 - [[Red Teaming]]: how alignment is stress-tested
 - [[Interpretability]]: understanding the inside as a route to trusting it
 - [[Bias]]: one of the concrete things alignment addresses
+- [[Emergent Misalignment]]: evidence that alignment can be fragile to narrow training
+- [[Goal Misgeneralisation]]: one concrete, observed way it fails
+- [[Outer and Inner Alignment]]: the standard way of splitting the problem
 
 ---
 

@@ -28,6 +28,10 @@ Practical concerns include annotation guidelines, inter-annotator agreement meas
 - [[Bias]]: annotator judgement is where much of it enters
 - [[Golden Dataset]]: labelling done for evaluation rather than training
 - [[Data Curation and Deduplication]]: the other half of dataset preparation
+- [[Ground Truth]]: the reference answers labelling produces
+- [[Label Noise]]: the errors poor labelling introduces
+- [[Preference Data]]: comparisons as a form of labelling
+- [[Image Segmentation]]: a task where labels are especially costly
 
 ---
 

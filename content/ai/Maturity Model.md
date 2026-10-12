@@ -24,6 +24,7 @@ Typical dimensions are strategy and sponsorship, use case portfolio and realised
 - [[Benchmarks and Evals]]: evaluation capability as a stage marker
 - [[Use Case Selection]]: portfolio as evidence of maturity
 - [[Champions and Centre of Excellence]]: the operating model
+- [[Hype Cycle]]: a market-level view of adoption stages
 
 ---
 

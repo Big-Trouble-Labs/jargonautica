@@ -23,6 +23,8 @@ Decompose the stack: model provider, orchestration and application logic, retrie
 - [[Vendor Lock-in]]: what buying commits you to
 - [[Procurement and Vendor Assessment]]: how to evaluate the buy option
 - [[Machine Learning Operations]]: what building actually involves
+- [[No-code and Low-code]]: a middle path between the two
+- [[AI Wrapper]]: the buy-a-model, build-the-product middle path
 
 ---
 

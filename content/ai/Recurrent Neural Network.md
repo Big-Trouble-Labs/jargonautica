@@ -25,6 +25,7 @@ RNNs maintain a hidden state updated at each step. Long short-term memory ('LSTM
 - [[Attention]]: the mechanism that made the replacement possible
 - [[Neural Network]]: the general structure it specialises
 - [[Context Window]]: the long-range memory problem it struggled with
+- [[Long Short-Term Memory]]: the variant that made it practical
 
 ---
 

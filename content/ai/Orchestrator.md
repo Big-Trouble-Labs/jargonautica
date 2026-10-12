@@ -24,6 +24,7 @@ Responsibilities include task routing, dependency management, parallelism, retry
 - [[Budget Caps]]: where limits are enforced
 - [[Termination Condition]]: what it checks
 - [[Handoff]]: the transfers it manages
+- [[Agent Framework]]: libraries that provide one ready-made
 
 ---
 

@@ -24,6 +24,7 @@ Components include domestic compute capacity, national or regional models traine
 - [[Data Residency and Confidentiality]]: part of the motivation
 - [[Language Coverage]]: national models for local languages
 - [[Concentration of Power]]: the structural concern behind it
+- [[Confidential Computing]]: a way to keep control on shared infrastructure
 
 ---
 

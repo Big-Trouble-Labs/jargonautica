@@ -25,6 +25,7 @@ The rectified linear unit ('ReLU'), which passes positive values through and out
 - [[Layers]]: why stacking them achieves anything
 - [[Logits and Softmax]]: the output-layer case
 - [[Deep Learning]]: the component that makes depth worthwhile
+- [[Universal Approximation Theorem]]: why non-linearity makes networks universal
 
 ---
 

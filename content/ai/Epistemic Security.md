@@ -24,6 +24,7 @@ Threats include personalised persuasion at scale, synthetic media targeting indi
 - [[Provenance and Watermarking]]: infrastructure for verification
 - [[Public Attitudes and Trust]]: what erodes
 - [[Bias]]: distortion of the shared picture
+- [[Misinformation and Disinformation]]: the content that threatens it
 
 ---
 

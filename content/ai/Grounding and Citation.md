@@ -27,6 +27,7 @@ Implemented by requiring span-level or chunk-level references in the output, val
 - [[Retrieval Augmented Generation]]: the system it belongs to
 - [[Confidence Display]]: showing users what is supported
 - [[Trust Calibration]]: evidence rather than assertion
+- [[Deep Research Agent]]: an application whose value rests on citations
 
 ---
 

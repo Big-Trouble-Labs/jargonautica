@@ -26,6 +26,7 @@ Computes attention in tiles that fit in fast on-chip memory, avoiding materialis
 - [[Compilation and Kernel Fusion]]: an example of a fused kernel
 - [[Context Window]]: what it made affordable
 - [[Sparse Attention]]: the approximate approaches it displaced
+- [[Paged Attention]]: a complementary memory optimisation
 
 ---
 

@@ -24,6 +24,8 @@ Assess candidates on value, defined as frequency multiplied by time or cost per 
 - [[Risk Tiers and High-risk Systems]]: error tolerance and regulation
 - [[Reversibility]]: why low-stakes cases come first
 - [[Assistant, Copilot and Agent]]: matching shape to task
+- [[Hype Cycle]]: a caution against choosing by excitement
+- [[Jagged Frontier]]: why capability is uneven across tasks
 
 ---
 

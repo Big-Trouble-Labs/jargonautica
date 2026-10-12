@@ -24,6 +24,7 @@ Thresholds expressed in floating point operations appear in several regulatory i
 - [[Scaling Laws]]: why compute is used as a proxy
 - [[European Union Artificial Intelligence Act]]: where thresholds appear
 - [[Responsible Scaling Policy]]: the voluntary analogue
+- [[General-purpose AI Model]]: where a compute threshold sets legal duties
 
 ---
 

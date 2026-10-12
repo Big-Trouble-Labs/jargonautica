@@ -27,6 +27,7 @@ A matrix is a two-dimensional array representing a linear map; a tensor generali
 - [[Neural Network]]: what its computation consists of
 - [[Arithmetic Intensity]]: why the shape of these operations decides speed
 - [[Eigenvalues and Eigenvectors]]: the structure inside a matrix
+- [[Linear Algebra]]: the wider branch of maths these belong to
 
 ---
 

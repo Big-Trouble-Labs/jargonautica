@@ -26,6 +26,8 @@ Techniques interpolate or rescale rotary position embeddings, sometimes with fre
 - [[Context Window]]: the limit being pushed
 - [[Lost in the Middle]]: why longer is not always usable
 - [[Cost Per Task]]: long context is expensive to serve
+- [[Attention Sink]]: why keeping the first tokens matters for long streams
+- [[Needle in a Haystack]]: how extended contexts are checked
 
 ---
 

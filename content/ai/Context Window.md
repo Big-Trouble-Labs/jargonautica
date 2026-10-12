@@ -24,6 +24,8 @@ The limit exists because attention cost grows with the square of sequence length
 - [[Retrieval Augmented Generation]]: how you get around a fixed window
 - [[Caching]]: how repeated context is made cheaper
 - [[Knowledge Cutoff]]: the other limit on what a model can know
+- [[Cache-augmented Generation]]: an approach bounded by its size
+- [[Needle in a Haystack]]: a common test of usable length
 
 ---
 

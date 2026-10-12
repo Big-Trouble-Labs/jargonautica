@@ -24,6 +24,7 @@ Approaches include upfront plan generation followed by execution, and interleave
 - [[Tree of Thoughts]]: search over plans
 - [[Human in the Loop]]: plans are easier to approve than trajectories
 - [[Search and Optimisation]]: planning as search over actions
+- [[Long-horizon Tasks]]: the tasks where planning matters most
 
 ---
 

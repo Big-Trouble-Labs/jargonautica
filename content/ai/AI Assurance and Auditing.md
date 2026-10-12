@@ -28,6 +28,7 @@ Approaches range from process audits against a management standard, through tech
 - [[Red Teaming]]: the adversarial half of assessment
 - [[ISO 42001 and the NIST AI Risk Management Framework]]: the standards audited against
 - [[Risk Tiers and High-risk Systems]]: what determines whether it is required
+- [[Conformity Assessment]]: the legally required form in the European Union
 
 ---
 

@@ -25,6 +25,7 @@ Concerns include budget allocation across system instructions, memory, retrieved
 - [[Retrieval Augmented Generation]]: the largest consumer of context
 - [[Caching]]: why a stable prefix is worth designing for
 - [[Memory]]: another claim on the same space
+- [[Agent Skills]]: a packaging format that loads context on demand
 
 ---
 

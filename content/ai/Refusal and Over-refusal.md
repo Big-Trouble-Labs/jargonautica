@@ -24,6 +24,7 @@ Refusal behaviour is installed during preference training and is measurable in b
 - [[Jailbreaking]]: attempts to defeat it
 - [[Steering Vector]]: refusal as a direction that can be removed
 - [[Open Weights]]: why safety training is removable from published weights
+- [[Model Specification]]: where refusal boundaries are written down
 
 ---
 

@@ -27,6 +27,7 @@ Each step conditions on the full preceding sequence, so generation is inherently
 - [[Caching]]: the optimisation this constraint motivates
 - [[Speculative Decoding]]: the other way round the sequential bottleneck
 - [[Temperature and Sampling]]: how each choice is made
+- [[Masked Language Modelling]]: the main alternative training objective
 
 ---
 

@@ -26,6 +26,7 @@ Each token produces three vectors: a query, a key and a value. Relevance between
 - [[Tokens]]: what attention weighs against each other
 - [[Caching]]: how repeated attention work is avoided
 - [[Interpretability]]: individual heads turn out to do identifiable jobs
+- [[Multi-head Attention]]: how attention is split across parallel heads
 
 ---
 

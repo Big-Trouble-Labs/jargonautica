@@ -23,6 +23,7 @@ Assessed with false-belief tasks and variants. Frontier models perform well on c
 - [[Emergent Capabilities]]: the dispute over whether it is real
 - [[Anthropomorphism]]: why we read minds into systems
 - [[Stochastic Parrot]]: the wider argument about understanding
+- [[Cognitive Science]]: the discipline that studies it in people
 
 ---
 

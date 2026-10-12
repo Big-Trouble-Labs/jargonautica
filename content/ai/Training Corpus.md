@@ -28,6 +28,7 @@ Frontier corpora run to trillions of tokens assembled from web crawls, curated c
 - [[Common Crawl and Web Scraping]]: where most of it comes from
 - [[Copyright and Training Data]]: the unresolved legal question
 - [[Knowledge Cutoff]]: the date the corpus stops
+- [[Datasheets for Datasets]]: a standard way to document one
 
 ---
 

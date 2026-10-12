@@ -23,6 +23,7 @@ Explicit feedback suffers from very low response rates and selection bias toward
 - [[Error Analysis]]: what the signals feed
 - [[Online and Offline Evaluation]]: closing the loop
 - [[Reinforcement Learning from Human Feedback]]: the training use of preferences
+- [[Cybernetics]]: the field that made feedback central
 
 ---
 

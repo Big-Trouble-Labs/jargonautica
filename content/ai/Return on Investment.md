@@ -26,6 +26,7 @@ Build the cost side from inference and infrastructure, integration and maintenan
 - [[Cost Per Task]]: the unit economics
 - [[Use Case Selection]]: the prioritisation input
 - [[Change Management]]: value only realised through adoption
+- [[Productivity Paradox]]: why measured gains can lag the spend
 
 ---
 

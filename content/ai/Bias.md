@@ -25,6 +25,7 @@ Bias enters through data collection, labelling, model design and deployment cont
 - [[Synthetic Data]]: can amplify bias across generations
 - [[Foundation Model]]: bias inherited by everything downstream
 - [[Red Teaming]]: how it gets probed for deliberately
+- [[Survivorship Bias]]: a statistical bias in which cases are kept
 
 ---
 

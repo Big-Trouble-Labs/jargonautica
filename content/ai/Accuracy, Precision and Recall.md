@@ -28,6 +28,8 @@ Precision is true positives over predicted positives; recall is true positives o
 - [[Classification and Regression]]: the problem type these measure
 - [[Benchmarks and Evals]]: where these numbers get reported
 - [[Guardrails]]: false positives and negatives are the trade-off there too
+- [[ROC Curve and AUC]]: a threshold-independent alternative
+- [[Object Detection]]: the basis of detection metrics
 
 ---
 

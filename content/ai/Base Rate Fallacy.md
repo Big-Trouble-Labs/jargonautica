@@ -24,6 +24,7 @@ Neglect of the prior in Bayesian updating. For a rare positive class, precision 
 - [[Imbalanced Data and Resampling]]: the modelling consequence
 - [[Guardrails]]: why low false positive rates still generate many false alarms
 - [[Anomaly Detection]]: alert volume as a structural problem
+- [[Regression to the Mean]]: another common statistical illusion
 
 ---
 

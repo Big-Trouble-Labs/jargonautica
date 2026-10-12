@@ -23,6 +23,7 @@ Relevant bodies include the International Organization for Standardization and t
 - [[European Union Artificial Intelligence Act]]: regulation that points at standards
 - [[AI Assurance and Auditing]]: what gets audited against
 - [[Model Card]]: documentation formats they shape
+- [[Conformity Assessment]]: where harmonised standards are applied
 
 ---
 

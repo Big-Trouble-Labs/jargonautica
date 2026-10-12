@@ -26,6 +26,9 @@ The term was coined in 2021 to capture both the generality of these models and t
 - [[Open Weights]]: whether the parameters are published or not
 - [[Bias]]: weaknesses inherited by everything built on top
 - [[Generative AI]]: the products built on these
+- [[Frontier AI]]: the policy label for the most capable ones
+- [[General-purpose AI Model]]: the legal term for it in European Union law
+- [[AI Wrapper]]: products built on top of one
 
 ---
 

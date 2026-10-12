@@ -28,6 +28,9 @@ The insight is that quality can be bought with inference-time computation rather
 - [[Reinforcement Learning]]: how they are trained on checkable tasks
 - [[Agent]]: multi-step work these models suit
 - [[Benchmarks and Evals]]: where their advantage shows up
+- [[Group Relative Policy Optimisation]]: a method used to train them
+- [[Process Reward Model]]: a verifier used to guide search
+- [[Thinking Budget]]: how test-time compute is controlled per request
 
 ---
 

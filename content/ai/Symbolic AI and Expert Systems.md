@@ -28,6 +28,9 @@ Comprises logic programming, production rule systems with forward and backward c
 - [[Interpretability]]: the property learned systems lack
 - [[Machine Learning]]: the approach that displaced it
 - [[Structured Output]]: how models now talk to symbolic tools
+- [[The Bitter Lesson]]: the argument against hand-built knowledge
+- [[Ontology]]: formal domain models in that tradition
+- [[Cybernetics]]: the rival tradition it lost ground to
 
 ---
 

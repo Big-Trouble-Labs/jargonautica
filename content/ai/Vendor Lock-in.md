@@ -24,6 +24,7 @@ Lock-in sources include model-specific prompt tuning, provider-specific tool and
 - [[Embeddings]]: re-indexing cost on model change
 - [[Golden Dataset]]: what makes qualifying an alternative fast
 - [[Open Weights]]: the independence argument
+- [[AI Wrapper]]: a business model especially exposed to it
 
 ---
 

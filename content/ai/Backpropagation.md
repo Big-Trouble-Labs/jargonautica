@@ -23,6 +23,7 @@ It is an efficient application of the chain rule from calculus, computing the gr
 - [[Neural Network]]: what it operates on
 - [[Layers]]: what the error is traced back through
 - [[Training]]: the wider process it is the engine of
+- [[Perceptron]]: the single-layer model it moved beyond
 
 ---
 

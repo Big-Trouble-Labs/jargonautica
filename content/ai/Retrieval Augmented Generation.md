@@ -26,6 +26,9 @@ Documents are chunked, converted into embeddings, and stored in a vector databas
 - [[Hallucination]]: the problem retrieval is mainly used to reduce
 - [[Knowledge Cutoff]]: the other problem it addresses
 - [[Fine-tuning]]: the alternative, better for style than for facts
+- [[Cache-augmented Generation]]: an alternative for small, stable corpora
+- [[Deep Research Agent]]: an agentic extension run over many searches
+- [[Information Retrieval]]: the field its retrieval half comes from
 
 ---
 

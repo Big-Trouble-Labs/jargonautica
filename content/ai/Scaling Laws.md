@@ -26,6 +26,7 @@ Empirical power-law relationships between loss and model size, dataset size and 
 - [[Emergent Capabilities]]: the part scaling does not predict
 - [[Deep Learning]]: the field these laws describe
 - [[Large Language Model]]: where they have been applied hardest
+- [[The Bitter Lesson]]: the essay often cited as their rationale
 
 ---
 

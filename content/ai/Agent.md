@@ -27,6 +27,8 @@ Implemented as a loop where the model chooses from a set of available tools, rec
 - [[Reasoning Models and Test-Time Compute]]: the models that suit multi-step work
 - [[Reinforcement Learning]]: the training approach behind acting in sequence
 - [[Guardrails]]: the checks needed once a system can act
+- [[Agent Framework]]: the software that packages its loop
+- [[Levels of Autonomy]]: a scale for how much it does unsupervised
 
 ---
 

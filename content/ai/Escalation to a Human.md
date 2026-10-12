@@ -27,6 +27,7 @@ Triggers include low confidence, detected sensitive categories such as distress 
 - [[Error Recovery]]: the wider design question
 - [[Handoff]]: the agent-to-agent equivalent
 - [[Service Level Objective]]: escalation rate as a measure
+- [[Human-AI Teaming]]: handover as one part of teaming
 
 ---
 

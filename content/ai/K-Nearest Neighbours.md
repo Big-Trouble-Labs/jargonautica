@@ -28,6 +28,7 @@ A non-parametric, instance-based method where the choice of k trades bias agains
 - [[Curse of Dimensionality]]: its main weakness
 - [[Retrieval Augmented Generation]]: recognisably its descendant
 - [[Normalisation and Standardisation]]: required for distances to mean anything
+- [[Approximate Nearest Neighbour Search]]: the fast approximate version at scale
 
 ---
 

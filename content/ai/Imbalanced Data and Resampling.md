@@ -27,6 +27,7 @@ Options include class weighting in the loss, undersampling the majority, oversam
 - [[Anomaly Detection]]: the extreme case
 - [[Model Confidence and Calibration]]: resampling distorts probabilities
 - [[Synthetic Data]]: generating minority examples
+- [[ROC Curve and AUC]]: a metric that can mislead under imbalance
 
 ---
 

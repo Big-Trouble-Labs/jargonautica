@@ -26,6 +26,7 @@ Uses approximate nearest neighbour indexes such as hierarchical navigable small 
 - [[Semantic Search]]: the capability it provides
 - [[Chunking]]: what produces the units it holds
 - [[Reranking]]: the stage that follows retrieval
+- [[Approximate Nearest Neighbour Search]]: the index technique inside it
 
 ---
 

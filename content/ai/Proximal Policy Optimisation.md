@@ -26,6 +26,7 @@ A policy gradient method using a clipped surrogate objective to bound the update
 - [[Direct Preference Optimisation]]: the simpler alternative
 - [[Kullback-Leibler Divergence]]: the penalty keeping it near the reference
 - [[Reinforcement Learning]]: the underlying method
+- [[Group Relative Policy Optimisation]]: a lighter variant without a value model
 
 ---
 

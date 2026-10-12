@@ -24,6 +24,7 @@ An agent observes a state, chooses an action from a policy, receives a reward, a
 - [[Reasoning Models and Test-Time Compute]]: trained with reinforcement learning on checkable tasks
 - [[Agent]]: systems that act in sequence, the natural home for this
 - [[Alignment]]: what reinforcement from feedback is trying to achieve
+- [[Cybernetics]]: an older tradition of learning from correction
 
 ---
 

@@ -23,6 +23,7 @@ Distinct from factual accuracy and from answer relevance. Measured by decomposin
 - [[Hallucination]]: the related but distinct failure
 - [[Retrieval Augmented Generation]]: the setting it applies to
 - [[LLM as a Judge]]: how it is usually measured
+- [[Summarisation]]: the main quality test for a summary
 
 ---
 

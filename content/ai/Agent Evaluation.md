@@ -24,6 +24,7 @@ Combines outcome measures, task success against a verifiable end state, with pro
 - [[Environment]]: which must be resettable
 - [[Benchmarks and Evals]]: the wider practice
 - [[Variance and Standard Deviation]]: why repeated runs are required
+- [[Long-horizon Tasks]]: the task type hardest to evaluate
 
 ---
 

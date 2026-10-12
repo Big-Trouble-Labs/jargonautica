@@ -24,6 +24,7 @@ Concentration exists at several layers: chip design and fabrication, cloud infra
 - [[Third-party Risk]]: systemic dependence
 - [[Sovereign AI]]: the national response
 - [[Compute]]: the capital constraint that limits entrants
+- [[Value Lock-in]]: one possible long-term consequence
 
 ---
 

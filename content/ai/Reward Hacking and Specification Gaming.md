@@ -30,6 +30,9 @@ Arises wherever the specified objective is a proxy for the intended one, which i
 - [[Interpretability]]: why you would want to see the process, not just the result
 - [[Existential Risk]]: the argument this observation gets extrapolated to
 - [[Recommender Systems]]: the largest deployed example of optimising a proxy
+- [[Emergent Misalignment]]: how it can generalise into broader misbehaviour
+- [[Goal Misgeneralisation]]: the failure that occurs even with a correct specification
+- [[Outer and Inner Alignment]]: the outer half of the problem
 
 ---
 

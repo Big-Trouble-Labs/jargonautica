@@ -24,6 +24,7 @@ Layers include process isolation, containers, virtual machines and microVMs, wit
 - [[Least Privilege]]: the complementary principle
 - [[Secrets Management]]: nothing valuable should be inside
 - [[Agent]]: what is being contained
+- [[AI Control]]: the wider set of protocols it sits within
 
 ---
 

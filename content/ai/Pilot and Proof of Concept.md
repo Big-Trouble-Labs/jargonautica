@@ -27,6 +27,8 @@ Should state in advance the hypothesis, the success measure with a threshold, th
 - [[Baseline]]: comparison against the current process
 - [[Change Management]]: why pilots stall at production
 - [[Maturity Model]]: where an organisation is starting from
+- [[Regulatory Sandbox]]: the supervised equivalent for regulated products
+- [[Hype Cycle]]: why early pilots can disappoint
 
 ---
 

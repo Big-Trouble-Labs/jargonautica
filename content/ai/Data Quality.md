@@ -24,6 +24,7 @@ Standard dimensions are completeness, accuracy, consistency, timeliness, validit
 - [[Schema and Metadata]]: the structure quality is checked against
 - [[Data Pipeline]]: where checks are enforced
 - [[Missing Data and Imputation]]: completeness in practice
+- [[Label Noise]]: label errors as a specific quality problem
 
 ---
 

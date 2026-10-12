@@ -27,6 +27,7 @@ Known biases include position bias, favouring whichever answer is shown first, v
 - [[Sycophancy]]: a bias the judge shares with the model it grades
 - [[Machine Learning Operations]]: where automated grading runs in production
 - [[Reasoning Models and Test-Time Compute]]: often used as the judge for hard tasks
+- [[BLEU and ROUGE]]: the overlap metrics it largely replaced
 
 ---
 

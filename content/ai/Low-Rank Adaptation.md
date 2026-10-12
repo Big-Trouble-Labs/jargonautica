@@ -25,6 +25,8 @@ Weight updates are approximated as the product of two low-rank matrices, dramati
 - [[Quantisation]]: combined with this in QLoRA
 - [[Pre-trained Model]]: the frozen base an adapter sits on
 - [[Weights, Parameters and Biases]]: what the adapter approximates a change to
+- [[Singular Value Decomposition]]: the maths of low-rank approximation
+- [[Parameter-efficient Fine-tuning]]: the family of methods it belongs to
 
 ---
 

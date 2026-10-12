@@ -26,6 +26,9 @@ Introduced by Anthropic in late 2024 and since adopted broadly across the indust
 - [[Prompt Injection]]: the risk a connected server introduces
 - [[Structured Output]]: how calls and results are shaped
 - [[Computer Use]]: the alternative when no such interface exists
+- [[Agent-to-agent Protocol]]: the counterpart standard for agents talking to agents
+- [[Agent Skills]]: a complementary way to extend agents with know-how rather than connections
+- [[Tool Poisoning]]: the main attack against connected servers
 
 ---
 

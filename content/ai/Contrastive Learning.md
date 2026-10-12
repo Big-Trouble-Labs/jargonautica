@@ -24,6 +24,7 @@ Trains representations using positive pairs, typically augmentations of the same
 - [[Joint Embedding]]: the multimodal application
 - [[Semantic Search]]: what the resulting embeddings enable
 - [[Data Augmentation]]: the source of positive pairs
+- [[Mutual Information]]: the quantity its objectives bound
 
 ---
 

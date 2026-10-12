@@ -24,6 +24,8 @@ Mechanistic interpretability seeks to identify specific circuits and features wi
 - [[Alignment]]: the safety case for wanting to see inside
 - [[Chain of Thought]]: why stated reasoning is not the same as real reasoning
 - [[Embeddings]]: features encoded in overlapping directions
+- [[Induction Head]]: a well understood mechanism it has found
+- [[Model Organisms]]: test cases where the hidden behaviour is known
 
 ---
 

@@ -23,6 +23,7 @@ Commissioned following the international summit process and chaired by Yoshua Be
 - [[Existential Risk]]: one of the contested areas it surveys
 - [[Dangerous Capability Evaluation]]: the evidence it synthesises
 - [[Compute Governance]]: policy levers it discusses
+- [[AI Safety Summits]]: the process that commissioned it
 
 ---
 

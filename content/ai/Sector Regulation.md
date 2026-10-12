@@ -23,6 +23,8 @@ Examples include model risk management expectations in banking, medical device r
 - [[Risk Tiers and High-risk Systems]]: use determines the regime
 - [[Liability and Indemnity]]: existing responsibility rules
 - [[Algorithmic Impact Assessment]]: often required by sector regulators
+- [[Regulatory Sandbox]]: one tool regulators use to test new uses
+- [[Autonomous Vehicles]]: a sector with its own AI law in Great Britain
 
 ---
 

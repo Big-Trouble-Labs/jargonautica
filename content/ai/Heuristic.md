@@ -23,6 +23,7 @@ In search, an estimate of the remaining cost to a goal, used to prioritise which
 - [[Algorithm]]: the exact counterpart
 - [[Inductive Bias]]: an assumption serving the same purpose in learning
 - [[No Free Lunch Theorem]]: why assumptions are unavoidable
+- [[Operations Research]]: where heuristics meet exact methods
 
 ---
 

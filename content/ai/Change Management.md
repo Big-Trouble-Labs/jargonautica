@@ -24,6 +24,7 @@ Established models emphasise a clear case for change, visible sponsorship, parti
 - [[Displacement and Augmentation]]: the concern to address honestly
 - [[Maturity Model]]: the wider organisational picture
 - [[Return on Investment]]: why value depends on adoption
+- [[Productivity Paradox]]: the organisational lag behind slow gains
 
 ---
 

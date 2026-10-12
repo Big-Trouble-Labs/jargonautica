@@ -24,6 +24,7 @@ Intermediate reasoning tokens give the model more computation to allocate to a p
 - [[Interpretability]]: stated reasoning is not a reliable account of the real process
 - [[Zero-shot, One-shot and Few-shot]]: often combined with worked examples
 - [[Tokens]]: reasoning steps cost tokens
+- [[Process Reward Model]]: a way to score each step
 
 ---
 

@@ -28,6 +28,7 @@ Requires randomisation at the correct unit, a pre-registered primary metric, a p
 - [[Multi-armed Bandit]]: the adaptive alternative
 - [[Online and Offline Evaluation]]: the online half
 - [[Return on Investment]]: how benefit is credibly measured
+- [[Regression to the Mean]]: a reason a control group is needed
 
 ---
 

@@ -24,6 +24,8 @@ Covers exhaustive and heuristic search, gradient-based continuous optimisation, 
 - [[Planning and Decomposition]]: search over actions in an agent
 - [[Symbolic AI and Expert Systems]]: the tradition this belongs to
 - [[Artificial Intelligence]]: the field's other great method besides learning
+- [[Mesa-optimisation]]: the idea of a learned optimiser inside a model
+- [[Operations Research]]: the discipline built around optimisation
 
 ---
 

@@ -23,6 +23,7 @@ Typically covers purpose and necessity, affected populations including groups li
 - [[Bias]]: disaggregated performance as evidence
 - [[Risk Tiers and High-risk Systems]]: what makes it necessary
 - [[AI Assurance and Auditing]]: the external review counterpart
+- [[Algorithmic Transparency Recording Standard]]: the published record that can accompany it
 
 ---
 

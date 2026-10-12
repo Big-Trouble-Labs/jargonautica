@@ -24,6 +24,7 @@ Combines per-request classification with account-level and cross-account behavio
 - [[Jailbreaking]]: one of the patterns sought
 - [[Rate Limits and Quotas]]: a common response
 - [[Data Residency and Confidentiality]]: the privacy trade-off it creates
+- [[AI-enabled Cyber Attacks]]: what it is trying to catch
 
 ---
 

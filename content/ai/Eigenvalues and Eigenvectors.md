@@ -26,6 +26,7 @@ For a square matrix, vectors whose direction is unchanged under the transformati
 - [[Matrix and Tensor]]: the object being decomposed
 - [[Learning Rate Schedule]]: curvature bounds the usable step size
 - [[Vector]]: the underlying object
+- [[Singular Value Decomposition]]: the generalisation to any matrix
 
 ---
 

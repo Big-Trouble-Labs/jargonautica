@@ -27,6 +27,9 @@ Key-value caching stores the attention keys and values for tokens already proces
 - [[System Prompt]]: the static prefix worth caching
 - [[Context Window]]: repeated context is what gets reused
 - [[Prompt]]: prompt order matters because of caching
+- [[Attention Sink]]: why the first tokens must stay in the cache
+- [[Paged Attention]]: how the key-value cache is stored efficiently
+- [[Cache-augmented Generation]]: preloading a whole knowledge base
 
 ---
 
