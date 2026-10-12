@@ -3,6 +3,11 @@
 export function remarkTwoLevel() {
   return (tree) => {
     const kids = tree.children;
+
+    // drop the note's own '# Title' line: the page template already prints the
+    // title, with the 'Also called' line beneath it. The note keeps it for Obsidian.
+    if (kids[0]?.type === 'heading' && kids[0].depth === 1) kids.splice(0, 1);
+
     const headingText = (n) =>
       n.type === 'heading' && n.depth === 2
         ? n.children.map((c) => c.value ?? '').join('').trim().toLowerCase()
